@@ -1,0 +1,44 @@
+---
+layout: post
+title: Rotação de banners em JavaScript
+categories:
+- Blog
+tags:
+- Programação
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  _topsy_cache_timestamp: '1277582600'
+  dsq_thread_id: '343460696'
+  _syntaxhighlighter_encoded: '1'
+---
+Criei um simples script em JavaScript para fazer a rotação de <em>banners </em>num ficheiro em html.
+
+O código abaixo foi escrito para a rotação de 3 <em>banners</em>, mas bastará alterar o número 3 para o número de <em>banners </em>que pretender rodar.
+
+[javascript]var rn = Math.floor(Math.random()*3)
+
+if (rn == 0) {
+     document.write('Código html do 1º banner');
+}
+
+if (rn == 1) {
+     document.write('Código html do 2º banner');
+}
+
+if (rn == 2) {
+     document.write('Código html do 3º banner');
+}[/javascript]
+
+Para colocar mais banners, utilize o mesmo código mas coloque "rn = x", sendo 3 para o 4º banner, 4 para o 5º e assim sucessivamente.
+
+[javascript]
+if (rn == x) {
+     document.write('Código html do Xº banner');
+}[/javascript]
+
+Para colocar no ficheiro html, bastará colocar o texto <strong>&lt;script type="text/javascript"&gt;</strong> antes do código e <strong>&lt;/script&gt;</strong> depois, ambos dentro das tags &lt;body&gt; e &lt;/body&gt;.
+
+?

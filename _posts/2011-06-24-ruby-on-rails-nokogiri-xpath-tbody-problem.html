@@ -1,0 +1,33 @@
+---
+layout: post
+title: '[Ruby on Rails] nokogiri + xpath = tbody problem'
+categories:
+- Blog
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  _syntaxhighlighter_encoded: '1'
+  dsq_thread_id: '343662217'
+---
+I was having a problem with the xpath that was being given to me by Firebug (plugin for Firefox), and Nokogiri (a ruby on rails gem) was not finding the element by xpath because <strong>Firefox added the &lt;tbody&gt; tag even if it is not there</strong>.
+
+So to fix this, just remove the 'tbody' from the xpath and all is good.
+
+[code lang="ruby" wraplines="true"]
+html = Nokogiri::HTML(open('url'))
+html.xpath('/html/body/table/tbody/tr[3]/td[2]').inner_html
+[/code]
+
+Simply becomes:
+
+[code lang="ruby" wraplines="true"]
+html = Nokogiri::HTML(open('url'))
+html.xpath('/html/body/table/tr[3]/td[2]').inner_html
+[/code]
+
+This may seem obvious, but it took me a while to figure out that was the problem, so I just want to make sure I leave this out there for anyone with the same problem.
+
+?

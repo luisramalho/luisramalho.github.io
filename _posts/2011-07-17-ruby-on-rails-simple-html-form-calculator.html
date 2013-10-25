@@ -1,0 +1,49 @@
+---
+layout: post
+title: Ruby on Rails simple html form calculator
+categories:
+- Blog
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  _syntaxhighlighter_encoded: '1'
+  dsq_thread_id: '360292802'
+---
+This is a simple calculator in ruby on rails that submits itself to perform an addition.
+
+<em>home_controller.rb</em>
+
+[code lang="ruby" wraplines="true"]
+  def index
+	@result = ''
+  end
+  def calculate
+  	@result = params[:f].to_i + params[:s].to_i
+  	render :action =&gt; :index
+  end
+[/code]
+
+<em>index.html.erb</em>
+
+[code lang="ruby" wraplines="true"]
+&lt;%= form_tag('/calculate') do %&gt;
+	&lt;%= text_field_tag(:f) %&gt;
+	&lt;%= label_tag(:f, &quot;First Number&quot;) %&gt;&lt;br /&gt;
+	&lt;%= text_field_tag(:s) %&gt;
+	&lt;%= label_tag(:s, &quot;Second Number&quot;) %&gt;&lt;br /&gt;
+	&lt;%= text_field_tag(:r) %&gt;
+	&lt;%= text_field_tag(:r, @result, :disabled =&gt; true) %&gt;
+	&lt;%= submit_tag(&quot;Calculate&quot;) %&gt;
+&lt;% end %&gt;
+[/code]
+
+<em>routes.rb</em>
+
+[code lang="ruby" wraplines="true"]
+match 'calculate' =&gt; 'home#calculate'
+[/code]
+
+?

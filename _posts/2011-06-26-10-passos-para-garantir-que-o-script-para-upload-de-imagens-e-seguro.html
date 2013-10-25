@@ -1,0 +1,112 @@
+---
+layout: post
+title: 10 passos para garantir que o script para upload de imagens é seguro.
+categories:
+- Blog
+tags:
+- PHP
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  _syntaxhighlighter_encoded: '1'
+  dsq_thread_id: '343461187'
+---
+Quando se autoriza o utilizador a fazer upload de um qualquer ficheiro abre-se o risco a activades maliciosas, neste caso o upload de um ficheiro tão simples como uma imagem tem de ser restringido de forma a que nada mas uma imagem seja autorizado.
+
+Script em PHP para o upload de imagem
+
+Começamos por obter os dados da imagem e converter para letras minúsculas:
+
+[php]
+$nome = $_FILES['foto']['name'];
+$tipo = $_FILES['foto']['type'];
+$nome = strtolower($nome);
+$tipo = strtolower($tipo);
+$extensao = strrchr($nome, '.');
+[/php]
+
+Depois iremos limitar as extensões a ".jpg", ".jpeg" ,".gif" e ".png".
+
+[php]
+$lista_segura = array(&quot;.jpg&quot;,&quot;.jpeg&quot;,&quot;.gif&quot;,&quot;.png&quot;); 
+if (!(in_array($extensao, $lista_segura ))) {
+	die('Só poderá fazer o uploade de imagens em formato GIF, JPEG e PNG.');
+}
+[/php]
+
+Deveremos também ver se o ficheiro contém algum tipo de PHP:
+
+[php]
+$pos = strpos($nome, 'php');
+if(!($pos === false)) {
+	die('Erro, o ficheiro contém php não permitido.');
+}
+[/php]
+
+Verificamos se o ficheiro é do tipo 'image'
+
+[php]
+$pos = strpos($nome, 'image');
+if($pos === false) {
+	die('Erro, o ficheiro não é uma imagem.');
+}
+[/php]
+
+Outra medida de segurança é chamar a função <em>getimagesize()</em> que falha caso o ficheiro não seja uma imagem. Contudo este método por si não é suficiente porque há maneiras de simular uma imagem e passar este teste, contudo mais vale colocá-lo. 'tmp_name' é o nome temporário do ficheiro.
+
+[php]
+$detalhes = getimagesize($_FILES['foto']['tmp_name']);
+if($detalhes['mime'] != 'image/gif' &amp;&amp; $detalhes['mime'] != 'image/jpeg' &amp;&amp; $detalhes['mime'] != 'image/jpg' &amp;&amp; $detalhes['mime'] != 'image/png') {
+	die('Erro, o ficheiro não é uma imagem.');
+}
+[/php]
+
+Verificámos se a imagem não tem extensão dupla, do tipo script-malicioso.php.gif
+
+[php]
+if(substr_count($tipo, '/')&gt;1){
+	die('Erro, o ficheiro contém dupla extensão e tal não é permitido.');
+}
+[/php]
+
+Verificámos também se o upload do ficheiro é feito apartir do nosso script, caso não seja não permitir.
+
+[php]
+if(!is_uploaded_file($_FILES['foto']['tmp_name'])) {
+	die('Só poderá fazer o upload apartir do nosso script.');
+}
+[/php]
+
+Devemos limitar também o tamanho da imagem, neste caso 1 MB por exemplo.
+
+[php]
+if($_FILES['foto']['size']  &gt; (1024000)){
+	die('Oops!  O seu ficheiro é demasiado grande, o limite é 1 MB.');
+}
+
+[/php]
+
+Devemos também chmod (change mode) da pasta onde os ficheiros irão ficar para 0777
+
+[php]
+$destino = &quot;imagens/&quot; .date(&quot;dmY&quot;).&quot;/&quot;; 
+if (!file_exists($destino)) {  
+	mkdir( $destino, 0777);  
+}
+[/php]
+
+Um passo fundamental é alterar o nome da imagem. Adicionei também o método <em>uniqid()</em> que irá criar um ID único baseado na hora em milisegundos, este método irá fazer com que o nome da imagem seja sempre único.
+
+[php]
+$imagem_final = $destino . uniqid() . md5(basename($_FILES['foto']['name'])) . $extensao;
+[/php]
+
+Por fim, convém adicionar algum tipo de <em>captcha</em> para não permitir os robôs de fazer o upload de imagens de forma automatizada.
+
+Estes são os passos que se devem fazer para criar um script que seja seguro para o servidor, agora é só criar o formulário em html, e adicionar os detalhes que se pretendem à base de dados.
+
+Se tiver qualquer sugestão ou outros métodos para proteger o script, por favor deixe-me um comentário.
+
+?

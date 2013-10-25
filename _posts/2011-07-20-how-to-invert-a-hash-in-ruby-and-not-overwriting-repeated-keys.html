@@ -1,0 +1,60 @@
+---
+layout: post
+title: How to invert a hash in Ruby and not overwriting repeated keys.
+categories:
+- Blog
+tags:
+- rails
+- ruby
+- ruby on rails
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '1'
+  dsq_thread_id: '363595852'
+  _wp_old_slug: invert-hash-in-ruby-and-not-overwriting-repeated-keys
+  _syntaxhighlighter_encoded: '1'
+---
+Ruby has a method called <strong>invert()</strong> for hashes, but it overwrites the repeated keys. Example
+
+[code lang="ruby" wraplines="true"]
+hash_of_ones = {&quot;one&quot;=&gt;1, &quot;uno&quot;=&gt;1, &quot;um&quot;=&gt;1}
+hash_of_ones.invert
+=&gt; {1 =&gt; &quot;one&quot;}
+[/code]
+
+This means that
+[code lang="ruby" wraplines="true"]
+hash != hash.invert.invert
+[/code]
+
+It simply overwrites the other values, which in most cases is not what you want. To solve this problem <a href="http://www.unixgods.org/~tilo/Ruby/invert_hash.html">Tilo Sloboda</a> came up with an interesting solution, I just put here his code in form of a method.
+
+[code lang="ruby" wraplines="true"]
+def inverse(hash)
+  i = Hash.new
+  hash.each_pair{ |k,v|
+      if (v.class == Array)
+          v.each{ |x|
+            if i.has_key?(x)
+               i[x] = [k,i[x]].flatten
+            else
+               i[x] = k
+            end
+          }
+      else
+		if i.has_key?(v)
+	   		i[v] = [k,i[v]].flatten
+		else
+	   		i[v] = k
+		end
+     end
+  }
+  return i
+end
+[/code]
+
+All credit and thanks to <a href="http://www.unixgods.org/~tilo/Ruby/invert_hash.html">http://www.unixgods.org/~tilo/Ruby/invert_hash.html</a>
+
+?

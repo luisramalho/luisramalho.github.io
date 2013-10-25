@@ -1,0 +1,69 @@
+---
+layout: post
+title: How to get the Facebook Access Token, the Extended Page Access Token that never
+  expires
+categories:
+- Blog
+tags: []
+status: publish
+type: post
+published: true
+meta:
+  _yoast_wpseo_linkdex: '0'
+  _edit_last: '1'
+  _yoast_wpseo_focuskw: ''
+  _yoast_wpseo_title: ''
+  _yoast_wpseo_metadesc: ''
+  _yoast_wpseo_meta-robots-noindex: '0'
+  _yoast_wpseo_meta-robots-nofollow: '0'
+  _yoast_wpseo_meta-robots-adv: none
+  _yoast_wpseo_sitemap-include: '-'
+  _yoast_wpseo_sitemap-prio: '-'
+  _yoast_wpseo_canonical: ''
+  _yoast_wpseo_redirect: ''
+  _yoast_wpseo_opengraph-description: ''
+  _yoast_wpseo_google-plus-description: ''
+  _oembed_e14fcfae6798b84b47c9551b14ecc819: '{{unknown}}'
+  _syntaxhighlighter_encoded: '1'
+  _wp_old_slug: how-to-get-the-facebook-access-token
+  dsq_thread_id: '1100765227'
+  _oembed_36b6494bb472eeac6aedccdc2907a7a8: '{{unknown}}'
+  _oembed_b551bc5fef643d5bbf436325bafd4907: '{{unknown}}'
+  _oembed_b39900909d47c7d5b17b1ce2445267f4: '{{unknown}}'
+---
+<p>You will need:</p>
+<ul>
+<li>[APPLICATION_ID]</li>
+<li>[APPLICATION_SECRET] (https://developers.facebook.com/apps/[APPLICATION_ID])</li>
+</ul>
+{% highlight bash %}
+https://www.facebook.com/dialog/oauth?client_id=[APPLICATION_ID]
+&scope=manage_pages,publish_stream
+&response_type=token
+&redirect_uri=https://www.facebook.com/connect/login_success.html
+{% endhighlight %}
+
+<p>When you see 'Success' then you have a URL like:</p>
+
+{% highlight bash %}
+https://www.facebook.com/connect/login_success.html#access_token=[ACCESS_TOKEN]&expires_in=[SECONDS]
+{% endhighlight %}
+
+<p>Grab the [ACCESS_TOKEN] then,</p>
+
+{% highlight bash %}
+https://graph.facebook.com/oauth/access_token?client_id=[APPLICATION_ID]
+&client_secret=[APPLICATION_SECRET]
+&grant_type=fb_exchange_token
+&fb_exchange_token=[ACCESS_TOKEN]
+{% endhighlight %}
+
+<p>Finally, you will see your extended page access token that never expires</p>
+
+{% highlight bash %}
+access_token=[EXTENDED_ACCESS_TOKEN]
+{% endhighlight %}
+
+{% highlight bash %}
+https://graph.facebook.com/me/accounts?access_token=[EXTENDED_ACCESS_TOKEN]
+{% endhighlight %}
