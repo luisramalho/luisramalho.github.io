@@ -20,4 +20,4 @@ As part of an assignment for CS3105 Artificial Intelligence I wrote an essay on 
 
 >20Q is a neural network implementation of the 20 questions game which basically consists of guessing what one is thinking by asking up to 20 binary answer questions, the overall goal is to create a network similar to the human brain with synaptic connections.
 
-You can read the full article [here](http://www.luisramalho.com/wp-content/uploads/2012/04/turing-test.pdf).
+You can read the full article [here](/assets/articles/the-turing-test-and-the-20-questions-game-artificial-intelligence.pdf).

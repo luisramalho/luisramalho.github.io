@@ -24,4 +24,4 @@ As part of an assignment for CS4203 Computer Security I wrote an Analysis of Gra
 
 >PassPoints consists of a "arbitrarily chosen sequence of points" in an image that the user has to memorize.
 
-You can read the full article [here](http://www.luisramalho.com/wp-content/uploads/2012/04/graphical-passwords.pdf).
+You can read the full article [here](/assets/articles/an-analysis-of-graphical-passwords-computer-security.pdf).
