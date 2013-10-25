@@ -37,7 +37,7 @@ Password: [YOUR_PASSWORD]
 Successfully logged into [https://api.appfog.com]
 {% endhighlight %}
 
-af export-service [POSTGRESQL_DATABASE]
+af export-service \[POSTGRESQL_DATABASE\]
 
 {% highlight bash %}
 Exporting data from '[POSTGRESQL_DATABASE]': OK
@@ -52,7 +52,7 @@ If you want to restore that backup in your localhost, then just execute the foll
 pg_restore -c -d [POSTGRESQL_DATABASE] -U [USERNAME] -W [DUMP_FILE]
 {% endhighlight %}
 
-[YOUR_DUMP_FILE] is inside the file that you just downloaded when you exported the database.
+\[YOUR_DUMP_FILE\] is inside the file that you just downloaded when you exported the database.
 
 These are the meanings of the flags used:
 
@@ -76,8 +76,8 @@ You can read more documentation http://www.postgresql.org/docs/8.4/static/app-pg
 
 Restore on AppFog with pg_dump & pg_restore
 
-PGPASSWORD=[LOCALHOST_PASSWORD] pg_dump -Fc --no-acl --no-owner -h localhost -U [LOCALHOST_USERNAME] [DEVELOPMENT_DB] > [DEVELOPMENT_DB].dump
+PGPASSWORD=\[LOCALHOST_PASSWORD\] pg_dump -Fc --no-acl --no-owner -h localhost -U \[LOCALHOST_USERNAME\] \[DEVELOPMENT_DB\] > \[DEVELOPMENT_DB\].dump
 
 Upload the .dump to your AppFog
 
-RAILS_ENV=proxied-appfog pg_restore --verbose --clean --no-acl --no-owner -h localhost -p [PORT] -d [POSTGRESQL_DATABASE] -U [USERNAME] [DUMP_FILE]
+RAILS_ENV=proxied-appfog pg_restore --verbose --clean --no-acl --no-owner -h localhost -p \[PORT\] -d \[POSTGRESQL_DATABASE\] -U \[USERNAME\] \[DUMP_FILE\]
