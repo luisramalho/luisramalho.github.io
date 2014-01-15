@@ -12,8 +12,8 @@ Welcome to my personal website. I have been development web applications since 2
 
 ## Work
 
-* Full-stack Developer (Ruby, Rails, HTML, CSS, Javascript, TDD) · [Sinemys, Ltd.](http://www.sinemys.com) · 2011 – Present
-* LAMP Developer (PHP & MySQL) · [Freelancer](/) · 2004 – 2008
+* Full-stack Developer (Ruby, Rails, HTML, CSS, Javascript, TDD)<br/>[Sinemys, Ltd.](http://www.sinemys.com) · 2011 – Present
+* LAMP Developer (PHP & MySQL)<br/>[Freelancer](/) · 2004 – 2008
 
 ## Education
 
