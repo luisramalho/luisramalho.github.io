@@ -8,13 +8,19 @@ overview: true
 
 ![This is me](/assets/luisramalho.jpeg)
 
-Welcome to my personal website. I consider myself a _bon vivant_, I enjoy travelling and document my trips [@destinos](http://www.destinos.pt), I like to read about tech and business and I consider programming food for the brain.
+Welcome to my personal website. I have been development web applications since 2004, starting with LAMP (PHP + MySQL) and after my degree in computer science &mdash; where we worked mostly with Java, I have been working with Ruby and the Rails framework. I am an avid reader, specially technical books.
 
 ## Work
 
-* Co-founder and Software Developer · [Sinemys, Ltd.](http://www.sinemys.com) · 2011 – Present
-* Ruby on Rails Developer · [Luís Ramalho, Ltd.](/) · 2011 – Present
-* Entrepreneur & Web Developer · [Luís Ramalho, Ltd.](/) · 2004 – Present
+* Full-Stack developer. Ruby/Rails, HTML, CSS, JS · [Sinemys, Ltd.](http://www.sinemys.com) · 2011 – Present
+* LAMP Developer (PHP + MySQL) · [Luís Ramalho, Ltd.](/) · 2004 – 2008
+
+## Education
+
+* BSc (Hons) Internet Computer Science · 2008 – 2012<br/>
+  [University of St Andrews](http://www.st-andrews.ac.uk/) (Scotland, United Kingdom)
+* BSc Physiotherapy · 2003 – 2007<br/>
+  [Universidade Fernando Pessoa](http://www.ufp.pt) (Oporto, Portugal)
 
 ## Projects
 
@@ -34,10 +40,3 @@ Welcome to my personal website. I consider myself a _bon vivant_, I enjoy travel
 * [Torcicolo.com](http://www.torcicolo.com) · Torticollis information page.
 * [Dietas.pt](http://www.dietas.pt) · Diets information page.
 * [Anedotas.pt](http://www.anedotas.pt) · Jokes page.
-
-## Education
-
-* BSc (Hons) Internet Computer Science · 2008 – 2012<br/>
-  [University of St Andrews](http://www.st-andrews.ac.uk/) (Scotland, United Kingdom)
-* BSc Physiotherapy · 2003 – 2007<br/>
-  [Universidade Fernando Pessoa](http://www.ufp.pt) (Oporto, Portugal)
