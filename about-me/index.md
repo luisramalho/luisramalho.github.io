@@ -8,12 +8,14 @@ overview: true
 
 ![This is me](/assets/luisramalho.jpeg)
 
-Welcome to my personal website. I have been development web applications since 2004, starting with LAMP (PHP + MySQL) and after my degree in computer science &mdash; where we worked mostly with Java, I have been working with Ruby and the Rails framework. I am an avid reader, specially technical books.
+Welcome to my personal website. I have been development web applications since 2004, starting as a freelancer with LAMP and after my degree in computer science &mdash; where we worked mostly with Java, I have been working with Ruby and the Rails framework. I try to contribute to open source @[GitHub](https://github.com/luisramalho) as much as possible and help others @[StackOverflow](http://stackoverflow.com/users/848250/luis-ramalho). I tweet [@luisramalho](https://twitter.com/luisramalho) and I am an avid reader, specially technical books.
 
 ## Work
 
-* Full-Stack developer. Ruby/Rails, HTML, CSS, JS · [Sinemys, Ltd.](http://www.sinemys.com) · 2011 – Present
-* LAMP Developer (PHP + MySQL) · [Luís Ramalho, Ltd.](/) · 2004 – 2008
+* Full-stack Developer · [Sinemys, Ltd.](http://www.sinemys.com) · 2011 – Present
+<br/>Ruby, Rails, HTML, CSS, Javascript, TDD
+* LAMP Developer · [Freelancer](/) · 2004 – 2008
+<br/>PHP & MySQL
 
 ## Education
 
