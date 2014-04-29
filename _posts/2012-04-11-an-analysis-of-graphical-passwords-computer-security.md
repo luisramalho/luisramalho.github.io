@@ -1,17 +1,6 @@
 ---
 layout: post
 title: An Analysis of Graphical Passwords | Computer Security
-categories:
-- Blog
-tags: []
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
-  dsq_thread_id: '645112295'
-  _wp_old_slug: an-analysis-of-graphical-passwords
-  _yoast_wpseo_linkdex: '0'
 ---
 
 As part of an assignment for CS4203 Computer Security I wrote an Analysis of Graphical Passwords.

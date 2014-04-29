@@ -1,16 +1,6 @@
 ---
 layout: post
 title: Distributed Systems | Big Data
-categories:
-- Blog
-tags: []
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
-  dsq_thread_id: '634975084'
-  _yoast_wpseo_linkdex: '0'
 ---
 
 As part of an assignment for CS4103 Distributed Systems

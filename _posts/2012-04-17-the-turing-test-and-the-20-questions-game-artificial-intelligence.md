@@ -1,17 +1,6 @@
 ---
 layout: post
 title: The Turing Test and the 20 Questions Game | Artificial Intelligence
-categories:
-- Blog
-tags: []
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
-  dsq_thread_id: '653192396'
-  _wp_old_slug: the-turing-test-and-the-20-questions-game
-  _yoast_wpseo_linkdex: '0'
 ---
 
 As part of an assignment for CS3105 Artificial Intelligence I wrote an essay on The Turing Test and the 20 Questions Game.

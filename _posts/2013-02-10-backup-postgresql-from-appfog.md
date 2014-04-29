@@ -1,30 +1,6 @@
 ---
 layout: post
 title: Backup PostgreSQL from AppFog
-categories:
-- Blog
-tags: []
-status: publish
-type: post
-published: true
-meta:
-  dsq_thread_id: '1091485866'
-  _yoast_wpseo_linkdex: '0'
-  _edit_last: '1'
-  _syntaxhighlighter_encoded: '1'
-  _yoast_wpseo_focuskw: ''
-  _yoast_wpseo_title: ''
-  _yoast_wpseo_metadesc: ''
-  _yoast_wpseo_meta-robots-noindex: '0'
-  _yoast_wpseo_meta-robots-nofollow: '0'
-  _yoast_wpseo_meta-robots-adv: none
-  _yoast_wpseo_sitemap-include: '-'
-  _yoast_wpseo_sitemap-prio: '-'
-  _yoast_wpseo_canonical: ''
-  _yoast_wpseo_redirect: ''
-  _yoast_wpseo_opengraph-description: ''
-  _yoast_wpseo_google-plus-description: ''
-  _oembed_7841091e7b17e4c3169c07c22a16dbf2: '{{unknown}}'
 ---
 
 Backing up a PostgreSQL database from AppFog is as easy as typing two commands:

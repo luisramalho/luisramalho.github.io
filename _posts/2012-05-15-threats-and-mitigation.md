@@ -1,16 +1,6 @@
 ---
 layout: post
 title: Threats and Mitigation
-categories:
-- Blog
-tags: []
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
-  dsq_thread_id: '690912762'
-  _yoast_wpseo_linkdex: '0'
 ---
 
 As part of an assignment for CS4203 Computer Security, I wrote an essay on Threats and Mitigation, its abstract below.

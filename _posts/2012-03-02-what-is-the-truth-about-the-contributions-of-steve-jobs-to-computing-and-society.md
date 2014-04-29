@@ -1,16 +1,6 @@
 ---
 layout: post
 title: What is the truth about the contributions of Steve Jobs to computing and society?
-categories:
-- Blog
-tags: []
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
-  dsq_thread_id: '597625160'
-  _yoast_wpseo_linkdex: '0'
 ---
 I wrote an article about the contributions of Steve Jobs to computing and society.
 

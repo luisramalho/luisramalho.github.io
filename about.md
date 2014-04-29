@@ -1,23 +1,24 @@
 ---
-layout: default
-title: About Luís Ramalho
-overview: true
+layout: page
+title: About
 ---
 
-#Hi, I'm Luís.
+<p class="message">
+  Hi, I'm Luís! Thank you for visiting my site.
+</p>
 
 ![This is me](/assets/luisramalho.jpeg)
 
-Welcome to my personal website. I have been development web applications since 2004, starting as a freelancer with LAMP and after my degree in computer science &mdash; where we worked mostly with Java, I have been working with Ruby and the Rails framework. I try to contribute to open source @[GitHub](https://github.com/luisramalho) as much as possible and help others @[StackOverflow](http://stackoverflow.com/users/848250/luis-ramalho). I tweet [@luisramalho](https://twitter.com/luisramalho) and I am an avid reader, specially technical books.
+<!-- I have been development web applications since 2004, starting as a hobby with LAMP and after my degree in computer science &mdash; where we worked mostly with Java, I have been working with Ruby and the Rails framework. I try to contribute to open source @[GitHub](https://github.com/luisramalho) as much as possible and help others @[StackOverflow](http://stackoverflow.com/users/848250/luis-ramalho). I tweet [@luisramalho](https://twitter.com/luisramalho) and I am an avid reader, specially technical books. -->
 
 ## Work
 
-* Full-stack Developer (Ruby, Rails, HTML, CSS, Javascript, TDD)<br/>[Sinemys, Ltd.](http://www.sinemys.com) · 2011 – Present
-* LAMP Developer (PHP & MySQL)<br/>[Freelancer](/) · 2004 – 2008
+* Full-stack developer <sup>Ruby, Rails, Javascript, CSS, HTML</sup><br/>[Sinemys, Ltd.](http://www.sinemys.com) · 2011 – 2014
+* LAMP developer <sup>PHP, MySQL</sup><br/>[Freelancer](/) · 2004 – 2008
 
 ## Education
 
-* BSc (Hons) Internet Computer Science · 2008 – 2012<br/>
+* BSc (Hons) Computer Science · 2008 – 2012<br/>
   [University of St Andrews](http://www.st-andrews.ac.uk/) (Scotland, United Kingdom)
 * BSc Physiotherapy · 2003 – 2007<br/>
   [Universidade Fernando Pessoa](http://www.ufp.pt) (Oporto, Portugal)
