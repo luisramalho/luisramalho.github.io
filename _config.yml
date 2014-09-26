@@ -16,3 +16,6 @@ author:
   url:            https://twitter.com/luisramalho
 
 paginate:         3
+
+gems:
+  - jekyll-sitemap
