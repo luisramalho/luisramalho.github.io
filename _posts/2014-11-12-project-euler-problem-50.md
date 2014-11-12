@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Project Euler — Problem 50
+category: euler
 ---
 
 Today is a good day! I'm among the 7% that solved 50 Euler problems. Woohoo! Ok, ok! Enough bragging, so the problem 50 is called [consecutive prime sum](https://projecteuler.net/problem=50) in which one must find the prime, below one-million, that can be written as the sum of the most consecutive primes.

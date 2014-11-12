@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Project Euler — Problem 31
+category: euler
 ---
 
 [Coin sums](https://projecteuler.net/problem=31) is a problem where one must count how many different ways a £2 coin can be made using any number of coins. Firstly, I tried to tackle this problem using brute-force, as I usually go about it. However, in this particular case and because there were so many coins (aka 8), creating a `for loop` for each and every coin was not a solution that I'd be happy with.

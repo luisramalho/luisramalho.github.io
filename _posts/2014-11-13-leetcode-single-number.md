@@ -1,6 +1,7 @@
 ---
 layout: post
 title: LeetCode's Single Number
+category: leetcode
 ---
 
 LeetCode's [Single Number](https://oj.leetcode.com/problems/single-number/) is a problem where an array of integers is given and every element appears twice except for one. The goal is to find that single one.

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Codility's Genomic Range Query
+category: codility
 ---
 
 [Genomic Range Query](https://codility.com/demo/take-sample-test/genomic_range_query) is a problem from codility with the goal of finding the minimal nucleotide from a range of sequence DNA. Note that before attempting this problem, you should read the material on [prefix sums](https://codility.com/media/train/3-PrefixSums.pdf).
