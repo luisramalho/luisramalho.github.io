@@ -4,9 +4,9 @@ title: Project Euler — Problem 52
 category: euler
 ---
 
-[Permuted multiples](https://projecteuler.net/problem=52) in which one must find the smallest positive integer, x, such that 2x, 3x, 4x, 5x, and 6x, contain the same digits.
+[Permuted multiples](https://projecteuler.net/problem=52) is a problem in which one must find the smallest positive integer, x, such that 2x, 3x, 4x, 5x, and 6x, contain the same digits.
 
-A brute-force solution is to just loop through integers until the number of permutations is 5, when that happens we have found our integer.
+A brute-force solution is to just loop through integers until 2x, 3x, 4x, 5x, and 6x are permuations of one another, when that happens we have found our integer.
 
 {% highlight java %}
 int count;
