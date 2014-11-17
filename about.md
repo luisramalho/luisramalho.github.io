@@ -11,7 +11,9 @@ title: About
 
 ## Work
 
-* Software Developer<br/>[Sinemys, Ltd.](http://www.sinemys.com) · 2011 – 2014
+* Android Developer<br/>[MobilePT](http://www.mobile.pt) · 2014 – Present
+
+* Ruby Developer<br/>[Sinemys, Ltd.](http://www.sinemys.com) · 2011 – 2014
 
 ## Education
 
