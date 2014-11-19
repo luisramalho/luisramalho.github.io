@@ -6,7 +6,18 @@ category: euler
 
 [Square root convergents](https://projecteuler.net/problem=57) is a problem in which one must find how many fractions of the square root of 2 contain a numerator with more digits than denominator.
 
-Since we are dealing with big numbers, we should use [BigIntegers](https://docs.oracle.com/javase/7/docs/api/java/math/BigInteger.html). Then, a pattern has emerged:
+Since we are dealing with big numbers, we should use [BigIntegers](https://docs.oracle.com/javase/7/docs/api/java/math/BigInteger.html). Then, I looked for a pattern since we are given the first 8 iterations.
+
+Respectively: \\(\frac{3}{2}\\),
+\\(\frac{7}{5}\\),
+\\(\frac{17}{12}\\),
+\\(\frac{41}{29}\\),
+\\(\frac{99}{70}\\),
+\\(\frac{239}{169}\\),
+\\(\frac{577}{408}\\),
+\\(\frac{1393}{985}\\)
+
+I found one that applied for both the numerator and denominator:
 
 $$
 n_{k+1} = 2\cdot n_k + n_{k-1}
@@ -16,7 +27,7 @@ $$
 d_{k+1} = 2\cdot d_k + d_{k-1}
 $$
 
-Above, \\( n \\) is the numerator and \\( d \\) is the denominator.
+Afterwards, it was trivial to code the solution:
 
 {% highlight java %}
 ArrayList<BigInteger> n = new ArrayList<>();
