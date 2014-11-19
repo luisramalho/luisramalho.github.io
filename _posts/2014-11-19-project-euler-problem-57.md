@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Project Euler — Problem 56
+title: Project Euler — Problem 57
 category: euler
 ---
 
