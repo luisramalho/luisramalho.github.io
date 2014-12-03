@@ -10,7 +10,9 @@
 
   <nav class="sidebar-nav">
     <a class="sidebar-nav-item{% if page.title == "Home" %} active{% endif %}" href="/">Home</a>
+    <a class="sidebar-nav-item{% if page.title == "About" %} active{% endif %}" href="/about">About</a>
 
+<!-- 
     {% assign pages_list = site.pages %}
     {% for node in pages_list %}
       {% if node.title != null %}
@@ -19,8 +21,8 @@
         {% endif %}
       {% endif %}
     {% endfor %}
+-->
 
-    <!-- <span class="sidebar-nav-item">Currently v{{ site.version }}</span> -->
   </nav>
 
   <div class="sidebar-item">
