@@ -7,6 +7,6 @@ After finishing my [Developing Android Apps](https://www.udacity.com/course/ud85
 
 The result I called [Gravidez App](https://play.google.com/store/apps/details?id=com.gravidez.messenger) and it is now published on Google Play.
 
-![First Android App in Google Play]({{ site.url }}/assets/gravidezapp.png "First Android App in Google Play")
+![First Android App on Google Play]({{ site.url }}/assets/gravidezapp.png "First Android App on Google Play")
 
 It was a very enriching first experience, and now it's time to build and publish my own app from scratch.
