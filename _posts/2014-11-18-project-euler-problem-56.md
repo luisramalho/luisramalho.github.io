@@ -2,6 +2,7 @@
 layout: post
 title: Project Euler — Problem 56
 category: euler
+comments: true
 ---
 
 [Powerful digit sum](https://projecteuler.net/problem=56) is a problem in which one must find the maximum digital sum considering natural numbers of the form, a^b, where a, b < 100.

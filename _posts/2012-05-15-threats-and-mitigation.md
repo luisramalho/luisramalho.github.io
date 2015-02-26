@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Threats and Mitigation
+comments: true
 ---
 
 As part of an assignment for CS4203 Computer Security, I wrote an essay on Threats and Mitigation, its abstract below.

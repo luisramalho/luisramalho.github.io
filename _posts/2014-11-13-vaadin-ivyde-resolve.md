@@ -1,6 +1,7 @@
 ---
 layout: post
 title: An internal error occurred during&#58; "IvyDE resolve".
+comments: true
 ---
 
 If you're trying to run Vaadin by following [this](https://github.com/vaadin/vaadin#setting-up-eclipse-to-develop-vaadin-7) and using Eclipse 4.4.1 it is likely that you will get the following error message:

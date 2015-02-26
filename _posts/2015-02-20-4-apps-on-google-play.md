@@ -1,15 +1,21 @@
 ---
 layout: post
-title: 4 Apps on Google Play
+title: Anedotas.pt - 4th App on Google Play
+comments: true
 ---
 
-It has been exactly a month since I've released [three android apps]({% post_url 2015-01-20-3-apps-on-google-play %}) on Google Play. Thus, I am very proud of saying that that number has now been incremented by one. The new addition is a simple jokes app, where I've made use of the awesome library [Seismic](https://github.com/square/seismic) from square. I have stil la lot to add there, but the foundation is done.
+It has been exactly a month since I've released [three android apps]({% post_url 2015-01-20-3-apps-on-google-play %}) on Google Play. Thus, I am very proud of saying that that number has now been incremented by one.
 
-I have also bought the amazing design tool from Bohemian Coding — Sketch 3, and improved some of the apps graphics and icons.
+The new addition is a simple jokes app, where I've made use of the awesome library [Seismic](https://github.com/square/seismic) from square. In the app the user just has to shake the phone to get a new joke.
 
-![4 Apps on Google Play]({{ site.url }}/assets/4-apps.png "4 Apps on Google Play")
+<figure class="third">
+	<img src="{{ site.url }}/assets/apps/anedotaspt/device-2015-02-20-223023.png">
+	<img src="{{ site.url }}/assets/apps/anedotaspt/device-2015-02-10-221408.png">
+	<img src="{{ site.url }}/assets/apps/anedotaspt/device-2015-02-10-221910.png">
+	<figcaption>Anedotas.pt App</figcaption>
+</figure>
 
-If you want to try the new jokes app you can get it by clicking on the badge below. A few warnings though, the jokes are in Portuguese and are still very few. Will add more later.
+If you want to try the new jokes app you can get it by clicking on the badge below.
 
 <a href="https://play.google.com/store/apps/details?id=com.luisramalho.anedotaspt">
   <img alt="Android app on Google Play"

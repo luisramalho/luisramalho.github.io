@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The Turing Test and the 20 Questions Game | Artificial Intelligence
+comments: true
 ---
 
 As part of an assignment for CS3105 Artificial Intelligence I wrote an essay on The Turing Test and the 20 Questions Game.

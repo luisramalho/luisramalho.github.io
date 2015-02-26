@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Backup PostgreSQL from AppFog
+excerpt: "How to backup your PostgreSQL database from AppFog"
+comments: true
 ---
 
 Backing up a PostgreSQL database from AppFog is as easy as typing two commands:

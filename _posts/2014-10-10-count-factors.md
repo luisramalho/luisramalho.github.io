@@ -2,6 +2,7 @@
 layout: post
 title: Codility's CountFactors
 category: codility
+comments: true
 ---
 
 [CountFactors](https://codility.com/demo/take-sample-test/count_factors) is a problem where one must compute the factors of a given number. Note that before attempting this problem, you should read the material on [prime and composite numbers

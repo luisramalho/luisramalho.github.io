@@ -1,15 +1,17 @@
 ---
 layout: page
 title: About
+tags: [about, Luís Ramalho]
+comments: true
+<!-- image:
+  feature: sample-image-2.jpg
+  credit: WeGraphics
+  creditlink: http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/ -->
 ---
 
-![Luís Ramalho](/assets/luisramalho.jpeg)
+Hey, I'm Luís.
 
-I'm interested in web and mobile development, currently more focused on Android.
-
-I hold two bachelor's degrees, one in Physical Therapy (2003-2007) from [UFP](http://www.ufp.pt) and another in Computer Science (2008-2012) from the [University of St Andrews](http://www.st-andrews.ac.uk/).
-
-I currently live in Turku, Finland.
+I'm a software developer and entrepreneur, currently living in Finland.
 
 ## Work
 
@@ -23,5 +25,6 @@ I currently live in Turku, Finland.
 
 * BSc (Hons) Computer Science · 2008 – 2012<br/>
   [University of St Andrews](http://www.st-andrews.ac.uk/) (Scotland, United Kingdom)
+
 * BSc Physiotherapy · 2003 – 2007<br/>
   [Universidade Fernando Pessoa](http://www.ufp.pt) (Oporto, Portugal)

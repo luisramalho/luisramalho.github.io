@@ -1,20 +1,59 @@
-# Dependencies
-markdown:         kramdown
-highlighter:      pygments
+# Site wide configuration
 
-# Permalinks
-permalink:        /:title
-
-# Setup
 title:            Luís Ramalho
-tagline:          'Entrepreneur & Developer'
-description:      '"Our greatest weakness lies in giving up. The most certain way to succeed is always to try just one more time." — Thomas Edison.'
+locale:           pt_PT
+url:              
+page:
 
-author:
-  name:           'Luís Ramalho'
-  url:            https://twitter.com/luisramalho
+# Jekyll configuration
 
-paginate:         3
-
+permalink:   /:title
+markdown:    kramdown
+highlighter: pygments
+sass:
+  sass_dir: _sass
+  style: compressed
 gems:
   - jekyll-sitemap
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: false
+
+
+# Site owner
+owner:
+  name: "Luís Ramalho"
+  avatar: luisramalho.jpg
+  bio: "Developer & Entrepreneur"
+  email: 
+  disqus-shortname: luisramalho
+  twitter: luisramalho
+  facebook: #username
+  google:
+    plus: #username
+    analytics: "UA-23792428-7"
+    verify: 
+    ad-client: 
+    ad-slot: 
+  bing-verify: 
+  github: luisramalho
+  stackoverflow: 848250/luís-ramalho
+  linkedin: luismanuelramalho
+  instagram: #username
+  lastfm: #username
+  tumblr: #username
+  pinterest: #username
+  foursquare: #username
+  steam: #username
+  dribbble: #username
+  youtube: #username
+  soundcloud: #username
+  weibo: #username
+  flickr: #username
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]

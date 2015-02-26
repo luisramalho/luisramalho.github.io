@@ -1,6 +1,7 @@
 ---
 layout: post
 title: PostgreSQL Case Sensitivity for a Rails Active Record Query
+comments: true
 ---
 
 PostgreSQL has case sensitivity and converts column names to lowercase when trying to do an Active Record Query. An error like the one below will occur:

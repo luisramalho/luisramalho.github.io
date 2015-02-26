@@ -1,6 +1,7 @@
 ---
 layout: post
 title: An Analysis of Graphical Passwords | Computer Security
+comments: true
 ---
 
 As part of an assignment for CS4203 Computer Security I wrote an Analysis of Graphical Passwords.

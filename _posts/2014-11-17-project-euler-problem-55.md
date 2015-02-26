@@ -2,6 +2,7 @@
 layout: post
 title: Project Euler — Problem 55
 category: euler
+comments: true
 ---
 
 [Lychrel numbers](https://projecteuler.net/problem=55) is a problem in which one must find how many Lychrel numbers are there below ten-thousand. You can read [here](http://en.wikipedia.org/wiki/Lychrel_number) more about Lychrel numbers.

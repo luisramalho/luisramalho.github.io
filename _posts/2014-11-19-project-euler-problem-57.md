@@ -2,6 +2,7 @@
 layout: post
 title: Project Euler — Problem 57
 category: euler
+comments: true
 ---
 
 [Square root convergents](https://projecteuler.net/problem=57) is a problem in which one must find how many fractions of the square root of 2 contain a numerator with more digits than denominator.
