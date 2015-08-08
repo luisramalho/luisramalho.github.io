@@ -11,11 +11,11 @@ comments: true
 
 Hey, I'm Luís.
 
-I'm a software developer and entrepreneur, currently living in Finland.
+I'm a software developer and entrepreneur, currently living in Helsinki, Finland.
 
 ## Work
 
-* Android Developer<br/>[Freelancer](https://play.google.com/store/apps/developer?id=Luís+Ramalho) · 2014 – Present
+* Software Developer<br/>[Futurice](http://www.futurice.com) · 2015 – Present
 
 * Ruby Developer<br/>[Sinemys, Ltd.](http://www.sinemys.com) · 2011 – 2014
 
