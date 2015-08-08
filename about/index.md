@@ -9,17 +9,15 @@ comments: true
   creditlink: http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/ -->
 ---
 
-Hey, I'm Luís.
+Hi, I'm Luís. I'm a software developer with an entrepreneurial mindset, currently living in Helsinki, Finland. 
 
-I'm a software developer and entrepreneur, currently living in Helsinki, Finland.
+## Professional Work
 
-## Work
+* Software Developer at [Futurice](http://www.futurice.com) · 2015 – Present
+  <br/><code>Java, Android SDK, C#, Windows Phone SDK</code>
 
-* Software Developer<br/>[Futurice](http://www.futurice.com) · 2015 – Present
-
-* Ruby Developer<br/>[Sinemys, Ltd.](http://www.sinemys.com) · 2011 – 2014
-
-* Web Developer<br/>[Freelancer](http://www.luisramalho.com) · 2004 – 2008
+* Co-founder & Software Developer at [Sinemys](http://www.sinemys.com) · 2011 – 2014
+  <br/><code>Ruby, Ruby on Rails, PostgreSQL, JavaScript, CSS, HTML</code>
 
 ## Education
 
