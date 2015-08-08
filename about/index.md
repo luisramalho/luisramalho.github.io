@@ -2,7 +2,7 @@
 layout: page
 title: About
 tags: [about, Luís Ramalho]
-comments: true
+comments: false
 <!-- image:
   feature: sample-image-2.jpg
   credit: WeGraphics
