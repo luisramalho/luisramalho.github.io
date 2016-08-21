@@ -25,4 +25,4 @@ if (Math.pow(i, 2) == n) {
 return result;
 {% endhighlight %}
 
-The full solution can be found [here](https://github.com/luisramalho/codility/blob/master/codility/L7E1MaxProfit.java).
+The full solution can be found [here](https://github.com/luisramalho/codility/blob/master/L08E2CountFactors.java).

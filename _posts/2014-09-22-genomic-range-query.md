@@ -59,4 +59,4 @@ for (int i = 0; i < p.length; i++) {
 }
 {% endhighlight %}
 
-The full solution can be found [here](https://github.com/luisramalho/codility/blob/master/L009GenomicRangeQuery.java).
+The full solution can be found [here](https://github.com/luisramalho/codility/blob/master/L03E2GenomicRangeQuery.java).
