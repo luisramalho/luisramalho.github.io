@@ -2,6 +2,7 @@
 layout: post
 title: GravidezApp - First Android App on Google Play
 comments: true
+published: false
 ---
 
 After finishing my [Developing Android Apps](https://www.udacity.com/course/ud853) tuturial, I decided that it was time to try and publish an app on Google Play. Thus, I thought a good starting point would be to use an open source project to get started, so I went ahead and created a [Telegram](https://telegram.org/) app so that pregnant women can exchange messages with one another.

@@ -2,6 +2,7 @@
 layout: post
 title: 3 Apps on Google Play
 comments: true
+published: false
 ---
 
 After the release of [first android app]({% post_url 2014-12-19-first-android-app-on-google-play %}) on Google Play that I've created and released another 2 android apps. They are both targetting the pregnancy market due to one of my projects called [gravidez.com](http://www.gravidez.com) which is gaining a bit of traction.

@@ -2,6 +2,7 @@
 layout: post
 title: Acidente Vascular Cerebral - 6th App on Google Play
 comments: true
+published: false
 ---
 
 Acidente Vascular Cerebral is an app about stroke.

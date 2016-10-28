@@ -2,6 +2,7 @@
 layout: post
 title: Anedotas.pt - 4th App on Google Play
 comments: true
+published: false
 ---
 
 It has been exactly a month since I've released [three android apps]({% post_url 2015-01-20-3-apps-on-google-play %}) on Google Play. Thus, I am very proud of saying that that number has now been incremented by one.

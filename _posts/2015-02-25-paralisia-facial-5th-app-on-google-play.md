@@ -2,6 +2,7 @@
 layout: post
 title: Paralisia Facial - 5th App on Google Play
 comments: true
+published: false
 ---
 
 Paralisia Facial is an app about facial nerve paralysis. I have a [blog](http://paralisiafacial.com/) about the subject that I've been keeping for some years now and decided to release an Android app for it.

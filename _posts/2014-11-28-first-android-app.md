@@ -2,6 +2,7 @@
 layout: post
 title: Sunshine - First Android App
 comments: true
+published: false
 ---
 
 Since I've built my [first android game]({% post_url 2012-01-08-reysoid-my-first-android-game %}) back in St. Andrews that I've been dying to get back to mobile development at full throttle. The time has come, and now I'm dedicating myself full-time to learn mobile development.
