@@ -2,14 +2,14 @@
 
 title:            Luís Ramalho
 locale:           pt_PT
-url:              
+url:
 page:
 
 # Jekyll configuration
 
 permalink:   /:title
 markdown:    kramdown
-highlighter: pygments
+highlighter: rouge
 sass:
   sass_dir: _sass
   style: compressed
@@ -29,17 +29,17 @@ owner:
   name: "Luís Ramalho"
   avatar: luisramalho.jpg
   bio: "Developer & Entrepreneur"
-  email: 
+  email:
   disqus-shortname: luisramalho
   twitter: luisramalho
   facebook: #username
   google:
     plus: #username
     analytics: "UA-23792428-7"
-    verify: 
-    ad-client: 
-    ad-slot: 
-  bing-verify: 
+    verify:
+    ad-client:
+    ad-slot:
+  bing-verify:
   github: luisramalho
   stackoverflow: 848250/luís-ramalho
   linkedin: luismanuelramalho
