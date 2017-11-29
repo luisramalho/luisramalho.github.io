@@ -9,14 +9,14 @@ comments: false
   creditlink: http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/ -->
 ---
 
-Hi, I'm Luís. I'm a software engineer with an entrepreneurial mindset, currently living in Coventry, England. 
+Hi, I'm Luís. I'm a software engineer with an entrepreneurial mindset, currently living in Coventry, England.
 
 ## Professional Work
 
 * Software Enginer at [Qvik](http://www.qvik.com) · 2017
   <br/><code>Mobile Software Engineer; Java, Kotlin, Android SDK</code>
 
-* Software Developer at [Futurice](http://www.futurice.com) · 2015 – Present
+* Software Developer at [Futurice](http://www.futurice.com) · 2015 – 2017
   <br/><code>Java, Android SDK, C#, Windows Phone SDK</code>
 
 * Co-founder & Software Developer at [Sinemys](http://www.sinemys.com) · 2011 – 2014
