@@ -9,7 +9,7 @@ comments: false
   creditlink: http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/ -->
 ---
 
-Hi, I'm Luís. I'm a software engineer with an entrepreneurial mindset, currently living in Coventry, England.
+Hello, my name is Luís and I'm currently pursuing a master's degree in Engineering Business Management at the University of Warwick in England, UK.
 
 ## Professional Work
 
