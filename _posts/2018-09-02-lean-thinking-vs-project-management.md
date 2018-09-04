@@ -5,11 +5,13 @@ category: product
 comments: true
 ---
 
+In order to compare and contrast Lean Thinking with Project Management it is essential do define an assessment criteria. These are the decisive aspects and objectives of a project that may deem it a success. 
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/0t8PNvjjIrI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 <br/>
 
-In order to compare and contrast Lean Thinking with Project Management it is essential do define an assessment criteria. These are the decisive aspects and objectives of a project that may deem it a success. Considering that there are broadly two stages in a project: the delivery and post delivery. Where the former is concerned with doing the project right and the latter with getting the project right. For this post the focus is on the former, thus the assessment criteria described will be regarding the process of handling a project; the delivery.
+Considering that there are broadly two stages in a project: the delivery and post delivery. Where the former is concerned with doing the project right and the latter with getting the project right. For this post the focus is on the former, thus the assessment criteria described will be regarding the process of handling a project; the delivery.
 
 ## Project Success Criteria
 
