@@ -1,0 +1,114 @@
+---
+layout: post
+title: Ways to improve estimates for project times and costs
+category: product
+comments: true
+---
+
+In order to discuss the possible ways to improve the accuracy of estimates, it is important to understand that there
+is not a direct and effortless solution to this problem. There are multiple ways to assess an estimate.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eBt9dbsRLUI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+<br/>
+
+According to
+Heinze (2017) these can be summarised in how credible, accurate, exact, precise, reliable, tolerant and valid an
+estimate is. Although, it could be argued that the most important measure of project success is how close it sticks
+to the project budget (i.e. cost) and schedule (i.e. duration or time). As described in the previous video, there are a wide
+range of reasons why estimates are often wrong. In fact, it would not have been possible to cover all the reasons or
+ways to improve each and every cause of inaccurate estimates. Therefore, this video will focus on a subset of
+causes and ways to increase the probability of better estimates.
+
+A large and growing body of literature (Clark and Lorenzoni 1996; Kemp 2004; Steyn et al. 2016; Amos 2004; Seeletse
+and Ladzani 2012) has investigated what would be necessary for a more accurate estimate. They suggest that first
+and foremost it is essential to have a well-defined scope of the project that it is to be estimated. In fact, it would
+certainly lead to an inaccurate estimate to try and assess a project without fully understanding its scope. Secondly,
+there needs to be a dependable cost element structure in which the information is well organised. Thirdly, it
+would be beneficial to use historical cost data, in other words, analysing similar projects and trying to understand
+how much time and money was spent in those projects could help more accurately estimate how much time and
+money will be needed for the new project. This information can be provided from the cost accounting records or
+by people with detailed knowledge or experience in similar projects. Furthermore, Novakova (2013) argues that
+this historical data should be combined with actual calculated costs in order to improve the likelihood that the
+estimate is closer to the final cost and time.
+
+As was pointed out in the previous video, risk plays a critical and important role in a project. Risk, if not
+accounted for, can cause a project to fail, be delayed or over budget. Therefore, it is absolutely necessary to have a
+contingency plan to cover the potential risks and uncertainties that are inherent to a complex project. Cheung,
+Wong and Skitmore (2008) identified that a person that is risk-averse and tolerates underestimates more than
+overestimates is more likely to produce a more accurate estimate. This is not surprising, thus a way to improve
+estimates for project times and costs is to simply take the risk and uncertainties into consideration and plan for
+them in advance. Thus, one could make sure that the person doing the estimate is of the type described previously.
+Moreover, one should not be reluctant to overestimate if the consequences of doing so are not exceedingly serious.
+
+As far as the psychological factors are concerned, there are a few threats that need to be taken into account. Firstly,
+opportunism or a hidden agenda can cause projects to be poorly estimated. These private interests can sometimes
+not be perfectly aligned with the goals of the project (Flyvbjerg, Bruzelius and Rothengatter 2003). It is difficult to
+give a solution for this problem, as the causes for that happening are extensive. However, one possible solution
+would be to not have a single person or small group of individuals doing the estimate. In fact, the more team
+members involved in creating the estimate the more likely it will be that it will be closer to the true cost and schedule. Secondly, bounded rationality, where the people involved might have cognitive limitations regarding
+the risk estimation (Bazerman andMoore 2008). In this case, it would be better to seek further opinions from
+experts or people that have dealt with similar projects in the past. Finally, there is the issue of subjectivity, where
+project players might base their estimates in previous experiences, values or personal opinions that are not linked
+to any data or calculations (Parkin 1996). As with the bounded rationality, in this situation, it would be beneficial
+to consult other people to try and achieve a better estimate.
+
+Thus far, several studies (MacDonell and Shepperd 2003; Trendowicz and Jeffery 2014; McLain 2009; Devaux
+1999) have suggested that a possible way to improve estimates for a project’s time and cost is to use multiple
+estimates rather than just one. In this manner, the subjectivity and unreliability of a single estimate is reduced;
+thus, increasing the accuracy of the final estimate. As noted byMcLain (2009), a way to combine these multiple
+estimates is to simply take an average. The other solution to deal with multiple estimates is to choose the one
+with the more thorough analysis or the one that the majority of the stakeholders in the project believe to be the
+closest to the actual cost and time.
+
+Furthermore, it is necessary to constantly measure and monitor a project so that the chances of it going wrong
+are reduced. Thus, leading to our final suggestion to improve estimates. That is to continuously re-estimate the
+project and with that being aware of the possible errors done in the previous estimates and adjusting the plan
+accordingly. Moreover, estimates should allow for flexibility, and therefore should not be too strict in terms of cost
+and time. So, a final thought would be to try and keep estimates as adaptable or responsive as possible in order to
+accommodate for the uncertainties that will most likely occur.
+
+In conclusion, estimates are not an exact science and it will always be impossible to have it absolutely accurate.
+Therefore, one should on one hand have the reasons for wrong estimates described in the previous video in mind when
+estimating, and on the other hand, try and apply the suggestions given in this video to eliminate some of these
+reasons when estimating the time and cost of a project.
+
+## References
+
+<small>Amos, Scott J (2004). Skills & knowledge of cost engineering. AACE International.</small>
+
+<small>Bazerman,Max H and Don AMoore (2008). ‘Judgment in managerial decision making’.</small>
+
+<small>Cheung, Franco KT,Margie WLWong andMartin Skitmore (2008). ‘A study of clients’ and estimators’ tolerance
+towards estimating errors’. In: Construction management and economics 26.4, pp. 349–362.</small>
+
+<small>Clark, Forrest and Albert B Lorenzoni (1996). Applied cost engineering. CRC Press.</small>
+
+<small>Devaux, Stephen A (1999). Total project control: A manager’s guide to integrated project planning, measuring, and
+tracking.Wiley New York, NY.</small>
+
+<small>Flyvbjerg, Bent, Nils Bruzelius andWerner Rothengatter (2003).Megaprojects and risk: An anatomy of ambition.
+Cambridge University Press.</small>
+
+<small>Heinze, Kurt (2017). Cost management of capital projects. Routledge.</small>
+
+<small>Kemp, Sid (2004). Project management demystified.McGraw Hill Professional.</small>
+
+<small>MacDonell, Stephen G andMartin J Shepperd (2003). ‘Combining techniques to optimize effort predictions in
+software project management’. In: Journal of Systems and Software 66.2, pp. 91–98.
+McLain, David (2009). ‘Quantifying project characteristics related to uncertainty’. In: ProjectManagement Journal
+40.4, pp. 60–73.</small>
+
+<small>Novakova, Helena (2013). ‘Methodology of transportation project management’. In: Journal of Systems Integration
+4.3, p. 30.</small>
+
+<small>Parkin, James (1996). ‘Organizational decision making and the project manager’. In: International Journal of
+ProjectManagement 14.5, pp. 257–263.</small>
+
+<small>Seeletse, Solly andWatson Ladzani (2012). ‘Project cost estimation techniques used by most emerging building
+contractors of South Africa’. In: Acta Structilia 19.1, pp. 106–125.</small>
+
+<small>Steyn, Herman et al. (2016). Project management: A multi-disciplinary approach. FPM Publishing.</small>
+
+<small>Trendowicz, Adam and Ross Jeffery (2014). ‘Software project effort estimation’. In: Foundations and Best Practice
+Guidelines for Success, Constructive CostModel–COCOMO pags, pp. 277–293.</small>
