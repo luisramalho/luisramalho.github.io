@@ -11,16 +11,16 @@ comments: true
 <li>[APPLICATION_SECRET] (https://developers.facebook.com/apps/[APPLICATION_ID])</li>
 </ul>
 {% highlight bash %}
-https://www.facebook.com/dialog/oauth?client_id=[APPLICATION_ID]
+https://facebook.com/dialog/oauth?client_id=[APPLICATION_ID]
 &scope=manage_pages,publish_stream
 &response_type=token
-&redirect_uri=https://www.facebook.com/connect/login_success.html
+&redirect_uri=https://facebook.com/connect/login_success.html
 {% endhighlight %}
 
 <p>When you see 'Success' then you have a URL like:</p>
 
 {% highlight bash %}
-https://www.facebook.com/connect/login_success.html#access_token=[ACCESS_TOKEN]&expires_in=[SECONDS]
+https://facebook.com/connect/login_success.html#access_token=[ACCESS_TOKEN]&expires_in=[SECONDS]
 {% endhighlight %}
 
 <p>Grab the [ACCESS_TOKEN] then,</p>

@@ -7,7 +7,7 @@ published: false
 
 Since I've built my [first android game]({% post_url 2012-01-08-reysoid-my-first-android-game %}) back in St. Andrews that I've been dying to get back to mobile development at full throttle. The time has come, and now I'm dedicating myself full-time to learn mobile development.
 
-Here is the screenshot of my first app, which was built following the [Developing Android Apps](https://www.udacity.com/course/ud853) tuturial by udacity:
+Here is the screenshot of my first app, which was built following the [Developing Android Apps](https://udacity.com/course/ud853) tuturial by udacity:
 
 <figure class="third">
 	<img src="{{ site.url }}/assets/apps/sunshine/device-2015-02-26-194819.png">

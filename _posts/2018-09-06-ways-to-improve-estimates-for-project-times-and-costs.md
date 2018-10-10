@@ -8,7 +8,7 @@ comments: true
 In order to discuss the possible ways to improve the accuracy of estimates, it is important to understand that there
 is not a direct and effortless solution to this problem. There are multiple ways to assess an estimate.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/eBt9dbsRLUI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://youtube.com/embed/eBt9dbsRLUI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 <br/>
 

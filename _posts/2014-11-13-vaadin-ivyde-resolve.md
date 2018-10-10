@@ -11,7 +11,7 @@ If you're trying to run Vaadin by following [this](https://github.com/vaadin/vaa
 > An internal error occurred during: "IvyDE resolve".
 > org.eclipse.osgi.internal.framework.EquinoxConfiguration$1 cannot be cast to java.lang.String
 
-The problem is totally on IvyDE's side and has already been [documented](https://issues.apache.org/jira/browse/IVY-1487) and a fix has been [merged](https://github.com/apache/ant-ivy/commit/81fec3193ad12a0f78eb021c4a1548484595860b). Nonetheless, it is still not available in the official update site `http://www.apache.org/dist/ant/ivyde/updatesite`. Thus, if you want to fix this issue you can use the [trunk version](http://ant.apache.org/ivy/ivyde/download.cgi#jenkins) of IvyDE.
+The problem is totally on IvyDE's side and has already been [documented](https://issues.apache.org/jira/browse/IVY-1487) and a fix has been [merged](https://github.com/apache/ant-ivy/commit/81fec3193ad12a0f78eb021c4a1548484595860b). Nonetheless, it is still not available in the official update site `http://apache.org/dist/ant/ivyde/updatesite`. Thus, if you want to fix this issue you can use the [trunk version](http://ant.apache.org/ivy/ivyde/download.cgi#jenkins) of IvyDE.
 
 Go to _Help > Install New Software..._
 

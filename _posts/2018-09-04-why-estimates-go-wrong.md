@@ -12,7 +12,7 @@ underestimated, thus, causing the potential cancellation or overrun of the proje
 In the sections that follow, there will be a discussion of reasons why estimates are often wrong and in another post give [suggestions of ways to improve them]({{ site.baseurl }}{% post_url 2018-09-06-ways-to-improve-estimates-for-project-times-and-costs %}).
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/kmGZQI5mrMY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://youtube.com/embed/kmGZQI5mrMY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## Reasons why estimates are often wrong
 

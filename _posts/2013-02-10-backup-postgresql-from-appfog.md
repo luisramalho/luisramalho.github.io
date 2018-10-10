@@ -50,7 +50,7 @@ User name to connect as.
 --password
 Force pg_restore to prompt for a password before connecting to a database.
 
-You can read more documentation http://www.postgresql.org/docs/8.4/static/app-pgrestore.html
+You can read more documentation http://postgresql.org/docs/8.4/static/app-pgrestore.html
 
 Restore on AppFog with pg_dump & pg_restore
 

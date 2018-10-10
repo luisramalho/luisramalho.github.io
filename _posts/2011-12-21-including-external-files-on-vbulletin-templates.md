@@ -3,7 +3,7 @@ layout: post
 title: Including External Files on vBulletin Templates
 comments: true
 ---
-If you want to include an external php file on your vBulletin templates you'll need more than just following this <a href="https://www.vbulletin.com/docs/html/templates_externalfiles">https://www.vbulletin.com/docs/html/templates_externalfiles</a>
+If you want to include an external php file on your vBulletin templates you'll need more than just following this <a href="https://vbulletin.com/docs/html/templates_externalfiles">https://vbulletin.com/docs/html/templates_externalfiles</a>
 
 Instead of just creating a plugin like:
 {% highlight php %}

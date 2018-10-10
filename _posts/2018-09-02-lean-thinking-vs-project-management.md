@@ -7,7 +7,7 @@ comments: true
 
 In order to compare and contrast Lean Thinking with Project Management it is essential do define an assessment criteria. These are the decisive aspects and objectives of a project that may deem it a success. 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/0t8PNvjjIrI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://youtube.com/embed/0t8PNvjjIrI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 <br/>
 

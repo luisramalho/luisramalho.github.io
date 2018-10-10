@@ -12,7 +12,7 @@ In this post I will give an overview of the Lean Philosophy and cover a few esse
 * Visual Control
 * Value-stream mapping and analysis
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/LMxN7Z0aDNg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe><br/>
+<iframe width="560" height="315" src="https://youtube.com/embed/LMxN7Z0aDNg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe><br/>
 
 Lean was initially defined by Womack, Jones and Roos (1990) as an integrated way of eliminating waste in order
 for every step in every process to add value for the customer. It has five principles that were described by Womack
