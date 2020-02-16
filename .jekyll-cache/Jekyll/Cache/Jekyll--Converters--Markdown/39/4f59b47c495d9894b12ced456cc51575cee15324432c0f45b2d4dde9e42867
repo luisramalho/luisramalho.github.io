@@ -1,0 +1,29 @@
+I"A<p><a href="https://projecteuler.net/problem=31">Coin sums</a> is a problem where one must count how many different ways a £2 coin can be made using any number of coins. Firstly, I tried to tackle this problem using brute-force, as I usually go about it. However, in this particular case and because there were so many coins (aka 8), creating a <code class="highlighter-rouge">for loop</code> for each and every coin was not a solution that I’d be happy with.</p>
+
+<p>Thus, and because none of the algorithms that came to mind applied here I turned my eyes to other possible solutions in the  In this research I found a very clever solution by <a href="http://bradleymize.com/project-euler-problem-31-coin-sums/">Bradley</a>, which introduced me to <a href="http://en.wikipedia.org/wiki/Partition_(number_theory)">Integer Partition</a>. If you are not familiar, basically:</p>
+
+<blockquote>
+  <p>In number theory and combinatorics, a partition of a positive integer n, also called an integer partition, is a way of writing n as a sum of positive integers. Two sums that differ only in the order of their summands are considered the same partition.</p>
+</blockquote>
+
+<p>Armed with this new knowledge, I was able to easily implement the <a href="http://algorithmist.com/index.php/Coin_Change">pseudo-code</a> and obtain the right answer for the problem.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span><span class="o">[]</span> <span class="n">coins</span> <span class="o">=</span> <span class="o">{</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">10</span><span class="o">,</span> <span class="mi">20</span><span class="o">,</span> <span class="mi">50</span><span class="o">,</span> <span class="mi">100</span><span class="o">,</span> <span class="mi">200</span><span class="o">};</span>
+<span class="k">return</span> <span class="nf">count</span><span class="o">(</span><span class="mi">200</span><span class="o">,</span> <span class="n">coins</span><span class="o">.</span><span class="na">length</span> <span class="o">-</span> <span class="mi">1</span><span class="o">,</span> <span class="n">coins</span><span class="o">);</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="nf">count</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">,</span> <span class="kt">int</span> <span class="n">m</span><span class="o">,</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">coins</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="mi">1</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="mi">0</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">m</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">n</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="mi">0</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="nf">count</span><span class="o">(</span><span class="n">n</span><span class="o">,</span> <span class="n">m</span> <span class="o">-</span> <span class="mi">1</span><span class="o">,</span> <span class="n">coins</span><span class="o">)</span> <span class="o">+</span> <span class="n">count</span><span class="o">(</span><span class="n">n</span> <span class="o">-</span> <span class="n">coins</span><span class="o">[</span><span class="n">m</span><span class="o">],</span> <span class="n">m</span><span class="o">,</span> <span class="n">coins</span><span class="o">);</span>
+<span class="o">}</span>
+<span class="k">return</span> <span class="n">result</span><span class="o">;</span></code></pre></figure>
+
+<p>The full solution can be found <a href="https://github.com/luisramalho/euler/blob/master/Problem031.java">here</a>.</p>
+:ET

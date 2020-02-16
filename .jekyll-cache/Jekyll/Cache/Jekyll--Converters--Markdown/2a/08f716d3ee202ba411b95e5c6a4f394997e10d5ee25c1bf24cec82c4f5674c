@@ -1,0 +1,46 @@
+I"<p><a href="https://projecteuler.net/problem=52">Permuted multiples</a> is a problem in which one must find the smallest positive integer, x, such that 2x, 3x, 4x, 5x, and 6x, contain the same digits.</p>
+
+<p>A brute-force solution is to just loop through integers until 2x, 3x, 4x, 5x, and 6x are permuations of one another, when that happens we have found our integer.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="n">count</span><span class="o">;</span>
+<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">2</span><span class="o">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="mi">7</span><span class="o">;</span> <span class="n">j</span><span class="o">++)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">isPermutation</span><span class="o">(</span><span class="n">i</span><span class="o">,</span> <span class="n">i</span> <span class="o">*</span> <span class="n">j</span><span class="o">))</span> <span class="o">{</span>
+            <span class="k">if</span> <span class="o">(++</span><span class="n">count</span> <span class="o">==</span> <span class="mi">5</span><span class="o">)</span> <span class="o">{</span>
+                <span class="k">return</span> <span class="n">i</span><span class="o">;</span>
+            <span class="o">}</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+            <span class="k">break</span><span class="o">;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>I have used the method below to find is two integers are permutations of one another. Basically, we create an array of numbers which will have indices 0 to 9, and then count how many occurrences are in the first integer. Then, we just do the inverse to the second integer and if they are permuations then the array should be all zeros.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="kt">boolean</span> <span class="nf">isPermutation</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">,</span> <span class="kt">int</span> <span class="n">y</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">int</span><span class="o">[]</span> <span class="n">numbers</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">10</span><span class="o">];</span>
+
+    <span class="kt">int</span> <span class="n">t</span> <span class="o">=</span> <span class="n">x</span><span class="o">;</span>
+    <span class="k">while</span> <span class="o">(</span><span class="n">t</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">numbers</span><span class="o">[</span><span class="n">t</span> <span class="o">%</span> <span class="mi">10</span><span class="o">]++;</span>
+        <span class="n">t</span> <span class="o">/=</span> <span class="mi">10</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="n">t</span> <span class="o">=</span> <span class="n">y</span><span class="o">;</span>
+    <span class="k">while</span> <span class="o">(</span><span class="n">t</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">numbers</span><span class="o">[</span><span class="n">t</span> <span class="o">%</span> <span class="mi">10</span><span class="o">]--;</span>
+        <span class="n">t</span> <span class="o">/=</span> <span class="mi">10</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">numbers</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">!=</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+            <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+
+    <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>The full solution can be found <a href="https://github.com/luisramalho/euler/blob/master/Problem052.java">here</a>.</p>
+:ET

@@ -1,0 +1,50 @@
+I"�<p>Backing up a PostgreSQL database from AppFog is as easy as typing two commands:</p>
+
+<p>af login</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">Attempting login to <span class="o">[</span>https://api.appfog.com]
+Email: <span class="o">[</span>YOUR_EMAIL]
+Password: <span class="o">[</span>YOUR_PASSWORD]
+Successfully logged into <span class="o">[</span>https://api.appfog.com]</code></pre></figure>
+
+<p>af export-service [POSTGRESQL_DATABASE]</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">Exporting data from <span class="s1">'[POSTGRESQL_DATABASE]'</span>: OK
+http://dl.eu01.aws.af.cm/serialized/postgresql/[DATABASE]/snapshots/[FILE_NUMBER]?token<span class="o">=[</span>TOKEN]</code></pre></figure>
+
+<h2 id="restore-using-pg_restore">Restore using pg_restore</h2>
+
+<p>If you want to restore that backup in your localhost, then just execute the following command:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">pg_restore <span class="nt">-c</span> <span class="nt">-d</span> <span class="o">[</span>POSTGRESQL_DATABASE] <span class="nt">-U</span> <span class="o">[</span>USERNAME] <span class="nt">-W</span> <span class="o">[</span>DUMP_FILE]</code></pre></figure>
+
+<p>[YOUR_DUMP_FILE] is inside the file that you just downloaded when you exported the database.</p>
+
+<p>These are the meanings of the flags used:</p>
+
+<p>-c
+–clean
+Clean (drop) database objects before recreating them.</p>
+
+<p>-d dbname
+–dbname=dbname
+Connect to database dbname and restore directly into the database.</p>
+
+<p>-U username
+–username=username
+User name to connect as.</p>
+
+<p>-W
+–password
+Force pg_restore to prompt for a password before connecting to a database.</p>
+
+<p>You can read more documentation http://postgresql.org/docs/8.4/static/app-pgrestore.html</p>
+
+<p>Restore on AppFog with pg_dump &amp; pg_restore</p>
+
+<p>PGPASSWORD=[LOCALHOST_PASSWORD] pg_dump -Fc –no-acl –no-owner -h localhost -U [LOCALHOST_USERNAME] [DEVELOPMENT_DB] &gt; [DEVELOPMENT_DB].dump</p>
+
+<p>Upload the .dump to your AppFog</p>
+
+<p>RAILS_ENV=proxied-appfog pg_restore –verbose –clean –no-acl –no-owner -h localhost -p [PORT] -d [POSTGRESQL_DATABASE] -U [USERNAME] [DUMP_FILE]</p>
+:ET

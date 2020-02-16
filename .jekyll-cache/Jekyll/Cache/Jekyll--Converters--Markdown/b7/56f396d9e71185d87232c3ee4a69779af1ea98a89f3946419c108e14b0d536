@@ -1,0 +1,51 @@
+I"/"<p><a href="https://codility.com/demo/take-sample-test/genomic_range_query">Genomic Range Query</a> is a problem from codility with the goal of finding the minimal nucleotide from a range of sequence DNA. Note that before attempting this problem, you should read the material on <a href="https://codility.com/media/train/3-PrefixSums.pdf">prefix sums</a>.</p>
+
+<p>In order to solve the problem I started by marking the position of each nucleotide in a 2D array. There are 4 nucleotides (A, C, G and T), so <code class="highlighter-rouge">a[0][i]</code> will mark the position <code class="highlighter-rouge">i</code> of nucleotide A as <code class="highlighter-rouge">1</code> if it appears in the string, otherwise <code class="highlighter-rouge">a[0][i]</code> will have the value of <code class="highlighter-rouge">0</code>. The same for <code class="highlighter-rouge">a[1][i]</code> for nucleotide C, and so on.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span><span class="o">[][]</span> <span class="n">a</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">4</span><span class="o">][</span><span class="n">s</span><span class="o">.</span><span class="na">length</span><span class="o">()];</span> <span class="c1">// A, C, G and T
+</span>
+<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">s</span><span class="o">.</span><span class="na">length</span><span class="o">();</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+    <span class="kt">char</span> <span class="n">ch</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
+    <span class="k">switch</span> <span class="o">(</span><span class="n">ch</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">case</span> <span class="sc">'A'</span><span class="o">:</span>
+        <span class="n">a</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="n">i</span><span class="o">]++;</span>
+        <span class="k">break</span><span class="o">;</span>
+    <span class="k">case</span> <span class="sc">'C'</span><span class="o">:</span>
+        <span class="n">a</span><span class="o">[</span><span class="mi">1</span><span class="o">][</span><span class="n">i</span><span class="o">]++;</span>
+        <span class="k">break</span><span class="o">;</span>
+    <span class="k">case</span> <span class="sc">'G'</span><span class="o">:</span>
+        <span class="n">a</span><span class="o">[</span><span class="mi">2</span><span class="o">][</span><span class="n">i</span><span class="o">]++;</span>
+        <span class="k">break</span><span class="o">;</span>
+    <span class="k">case</span> <span class="sc">'T'</span><span class="o">:</span>
+        <span class="n">a</span><span class="o">[</span><span class="mi">3</span><span class="o">][</span><span class="n">i</span><span class="o">]++;</span>
+        <span class="k">break</span><span class="o">;</span>
+    <span class="k">default</span><span class="o">:</span>
+        <span class="k">break</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>Once we have the position of each nucleotide in the 2D array <code class="highlighter-rouge">a</code>, we can proceed to compute the prefix sum of each of the nucleotides:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span><span class="o">[][]</span> <span class="n">prefixSum</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">4</span><span class="o">][</span><span class="n">s</span><span class="o">.</span><span class="na">length</span><span class="o">()</span> <span class="o">+</span> <span class="mi">1</span><span class="o">];</span>
+<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">s</span><span class="o">.</span><span class="na">length</span><span class="o">()</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span> <span class="n">k</span><span class="o">++)</span> <span class="o">{</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="o">;</span> <span class="n">j</span><span class="o">++)</span> <span class="o">{</span>
+        <span class="n">prefixSum</span><span class="o">[</span><span class="n">j</span><span class="o">][</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">prefixSum</span><span class="o">[</span><span class="n">j</span><span class="o">][</span><span class="n">k</span> <span class="o">-</span> <span class="mi">1</span><span class="o">]</span> <span class="o">+</span> <span class="n">a</span><span class="o">[</span><span class="n">j</span><span class="o">][</span><span class="n">k</span> <span class="o">-</span> <span class="mi">1</span><span class="o">];</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>The final step is to return the value of the minimal impact factor of nucleotides contained in the given range. I did that by checking if the difference between the highest range prefix sum and the lowest returns a value above 0, if yes, then it means that a nucleotide of that impact factor must have occured, hence it’s our answer and we can break out of the loop.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span><span class="o">[]</span> <span class="n">m</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">p</span><span class="o">.</span><span class="na">length</span><span class="o">];</span>
+<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">p</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="n">p</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
+    <span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="n">q</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="o">;</span> <span class="n">j</span><span class="o">++)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">prefixSum</span><span class="o">[</span><span class="n">j</span><span class="o">][</span><span class="n">y</span> <span class="o">+</span> <span class="mi">1</span><span class="o">]</span> <span class="o">-</span> <span class="n">prefixSum</span><span class="o">[</span><span class="n">j</span><span class="o">][</span><span class="n">x</span><span class="o">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">m</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span>
+            <span class="k">break</span><span class="o">;</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>The full solution can be found <a href="https://github.com/luisramalho/codility/blob/master/L03E2GenomicRangeQuery.java">here</a>.</p>
+:ET

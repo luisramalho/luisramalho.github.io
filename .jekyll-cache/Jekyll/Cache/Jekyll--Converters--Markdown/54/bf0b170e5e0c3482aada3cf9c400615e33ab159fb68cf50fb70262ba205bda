@@ -1,0 +1,57 @@
+I"L<p><a href="https://projecteuler.net/problem=58">Spiral primes</a> is a problem in which one must find the side length of the square spiral for which the ratio of primes along both diagonals first falls below 10%. More information on this spiral can be found on <a href="http://en.wikipedia.org/wiki/Ulam_spiral">Ulam spiral</a>.</p>
+
+<p>In order to solve this problem I started by creating an <code class="highlighter-rouge">ArrayList</code> of all the diagonal numbers and check for their primality. However, creating an <code class="highlighter-rouge">ArrayList</code> from scratch for every loop was inefficient and soon I have implemented a method to return just the diagonal numbers for the current loop:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="nf">getDiagonalNumbersForLoop</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">diagonalNumbers</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;();</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="o">)</span> <span class="k">return</span> <span class="n">diagonalNumbers</span><span class="o">;</span>
+
+    <span class="kt">int</span> <span class="n">offset</span> <span class="o">=</span> <span class="o">(</span><span class="n">n</span> <span class="o">*</span> <span class="mi">2</span><span class="o">)</span> <span class="o">-</span> <span class="mi">2</span><span class="o">;</span>
+    <span class="kt">int</span> <span class="n">currentDiagonalNumber</span> <span class="o">=</span> <span class="n">getFirstDiagonal</span><span class="o">(</span><span class="n">n</span><span class="o">);</span>
+    <span class="kt">int</span> <span class="n">lastDiagonalNumber</span> <span class="o">=</span> <span class="n">getLastDiagonal</span><span class="o">(</span><span class="n">n</span><span class="o">);</span>
+
+    <span class="n">diagonalNumbers</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">currentDiagonalNumber</span><span class="o">);</span>
+    <span class="k">while</span> <span class="o">(</span><span class="n">currentDiagonalNumber</span> <span class="o">!=</span> <span class="n">lastDiagonalNumber</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">currentDiagonalNumber</span> <span class="o">+=</span> <span class="n">offset</span><span class="o">;</span>
+        <span class="n">diagonalNumbers</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">currentDiagonalNumber</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="k">return</span> <span class="n">diagonalNumbers</span><span class="o">;</span>
+<span class="o">}</span>
+
+<span class="kd">private</span> <span class="kt">int</span> <span class="nf">getFirstDiagonal</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="nf">getLastDiagonal</span><span class="o">(</span><span class="n">n</span><span class="o">)</span> <span class="o">-</span> <span class="o">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="o">)</span> <span class="o">*</span> <span class="mi">6</span><span class="o">;</span>
+<span class="o">}</span>
+
+<span class="kd">private</span> <span class="kt">int</span> <span class="nf">getLastDiagonal</span><span class="o">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">sideLength</span> <span class="o">=</span> <span class="n">n</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span><span class="o">;</span>
+    <span class="k">return</span> <span class="n">sideLength</span> <span class="o">*</span> <span class="n">sideLength</span><span class="o">;</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>The <code class="highlighter-rouge">getLastDiagonal()</code> returns the bottom right diagonal number in the square spiral, so for <code class="highlighter-rouge">n = 2</code> it returns 9. Afterwards it is straight forward to obtain the first diagonal number with the method <code class="highlighter-rouge">getFirstDiagonal()</code>, so we get 3 as the first diagonal number in the second spiral square.</p>
+
+<p>Having the first and last diagonal numbers, and the offset between each diagonal number in a certain size <code class="highlighter-rouge">n</code> square spiral makes it easy to return all the diagonal numbers.</p>
+
+<p>Thus, one just needs to accumulate the number of primes as we keep adding square spirals and divide by the total number of diagonal numbers.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kt">int</span> <span class="nf">solution</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">primes</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+    <span class="kt">double</span> <span class="n">diagonalNumbers</span><span class="o">;</span>
+    <span class="kt">double</span> <span class="n">percentageOfPrimes</span> <span class="o">=</span> <span class="mi">100</span><span class="o">;</span>
+    <span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">numbers</span><span class="o">;</span>
+
+    <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">2</span><span class="o">;</span>
+    <span class="k">while</span> <span class="o">(</span><span class="n">percentageOfPrimes</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">numbers</span> <span class="o">=</span> <span class="n">getDiagonalNumbersForLoop</span><span class="o">(</span><span class="n">count</span><span class="o">);</span>
+        <span class="n">diagonalNumbers</span> <span class="o">=</span> <span class="o">(</span><span class="kt">double</span><span class="o">)</span> <span class="o">(</span><span class="n">count</span> <span class="o">*</span> <span class="mi">4</span> <span class="o">-</span> <span class="mi">3</span><span class="o">);</span>
+        <span class="n">primes</span> <span class="o">+=</span> <span class="n">getNumberOfPrimes</span><span class="o">(</span><span class="n">numbers</span><span class="o">);</span>
+        <span class="n">percentageOfPrimes</span> <span class="o">=</span> <span class="o">(</span><span class="n">primes</span> <span class="o">/</span> <span class="n">diagonalNumbers</span><span class="o">)</span> <span class="o">*</span> <span class="mi">100</span><span class="o">;</span>
+        <span class="n">count</span><span class="o">++;</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="o">(</span><span class="n">count</span> <span class="o">-</span> <span class="mi">1</span><span class="o">)</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span><span class="o">;</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>Took: 136ms.</p>
+
+<p>The full solution can be found <a href="https://github.com/luisramalho/euler/blob/master/Problem058.java">here</a>.</p>
+:ET

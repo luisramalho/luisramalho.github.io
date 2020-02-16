@@ -1,0 +1,46 @@
+I"ø<p><a href="https://projecteuler.net/problem=57">Square root convergents</a> is a problem in which one must find how many fractions of the square root of 2 contain a numerator with more digits than denominator.</p>
+
+<p>Since we are dealing with big numbers, we should use <a href="https://docs.oracle.com/javase/7/docs/api/java/math/BigInteger.html">BigIntegers</a>. Then, I looked for a pattern since we are given the first 8 iterations.</p>
+
+<p>Respectively: \(\frac{3}{2}\),
+\(\frac{7}{5}\),
+\(\frac{17}{12}\),
+\(\frac{41}{29}\),
+\(\frac{99}{70}\),
+\(\frac{239}{169}\),
+\(\frac{577}{408}\),
+\(\frac{1393}{985}\)</p>
+
+<p>I found one that applied for both the numerator and denominator:</p>
+
+<script type="math/tex; mode=display">n_{k+1} = 2\cdot n_k + n_{k-1}</script>
+
+<script type="math/tex; mode=display">d_{k+1} = 2\cdot d_k + d_{k-1}</script>
+
+<p>Afterwards, it was trivial to code the solution:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">BigInteger</span><span class="o">&gt;</span> <span class="n">n</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;();</span>
+<span class="n">n</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="nc">BigInteger</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="mi">3</span><span class="o">));</span> <span class="c1">// first numerator</span>
+<span class="n">n</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="nc">BigInteger</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="mi">7</span><span class="o">));</span> <span class="c1">// second numerator</span>
+
+<span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">BigInteger</span><span class="o">&gt;</span> <span class="n">d</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;();</span>
+<span class="n">d</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="nc">BigInteger</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="mi">2</span><span class="o">));</span> <span class="c1">// first denominator</span>
+<span class="n">d</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="nc">BigInteger</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="mi">5</span><span class="o">));</span> <span class="c1">// second denominator</span>
+
+<span class="nc">BigInteger</span> <span class="n">two</span> <span class="o">=</span> <span class="nc">BigInteger</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span>
+<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">1000</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+    <span class="n">n</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">n</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">).</span><span class="na">multiply</span><span class="o">(</span><span class="n">two</span><span class="o">).</span><span class="na">add</span><span class="o">(</span><span class="n">n</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="o">)));</span>
+    <span class="n">d</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">d</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">).</span><span class="na">multiply</span><span class="o">(</span><span class="n">two</span><span class="o">).</span><span class="na">add</span><span class="o">(</span><span class="n">d</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="o">)));</span>
+<span class="o">}</span>
+
+<span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">.</span><span class="na">size</span><span class="o">();</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">n</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">).</span><span class="na">toString</span><span class="o">().</span><span class="na">length</span><span class="o">()</span> <span class="o">&gt;</span> <span class="n">d</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">).</span><span class="na">toString</span><span class="o">().</span><span class="na">length</span><span class="o">())</span> <span class="o">{</span>
+        <span class="n">count</span><span class="o">++;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="k">return</span> <span class="n">count</span><span class="o">;</span></code></pre></figure>
+
+<p>The full solution can be found <a href="https://github.com/luisramalho/euler/blob/master/Problem057.java">here</a>.</p>
+:ET

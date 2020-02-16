@@ -1,0 +1,27 @@
+I"�<p>If you’re trying to run Vaadin by following <a href="https://github.com/vaadin/vaadin#setting-up-eclipse-to-develop-vaadin-7">this</a> and using Eclipse 4.4.1 it is likely that you will get the following error message:</p>
+
+<!-- ![Vaadin IvyDE Error](http://localhost:4000/assets/vaadin-error-1.png "Vaadin IvyDE Error") -->
+
+<blockquote>
+  <p>An internal error occurred during: “IvyDE resolve”.
+org.eclipse.osgi.internal.framework.EquinoxConfiguration$1 cannot be cast to java.lang.String</p>
+</blockquote>
+
+<p>The problem is totally on IvyDE’s side and has already been <a href="https://issues.apache.org/jira/browse/IVY-1487">documented</a> and a fix has been <a href="https://github.com/apache/ant-ivy/commit/81fec3193ad12a0f78eb021c4a1548484595860b">merged</a>. Nonetheless, it is still not available in the official update site <code class="highlighter-rouge">http://apache.org/dist/ant/ivyde/updatesite</code>. Thus, if you want to fix this issue you can use the <a href="http://ant.apache.org/ivy/ivyde/download.cgi#jenkins">trunk version</a> of IvyDE.</p>
+
+<p>Go to <em>Help &gt; Install New Software…</em></p>
+
+<p><img src="http://localhost:4000/assets/vaadin-error-2.png" alt="Install New Software" title="Install New Software" /></p>
+
+<p>Then enter <code class="highlighter-rouge">https://builds.apache.org/job/IvyDE-updatesite/lastSuccessfulBuild/artifact/trunk/build/</code> in the <em>Work with:</em> field.</p>
+
+<p><img src="http://localhost:4000/assets/vaadin-error-3.png" alt="Install New Software" title="Install New Software" /></p>
+
+<p>Finally, select <code class="highlighter-rouge">Apache Ivy Library</code> and click Finnish.</p>
+
+<p>Now you can import the Vaadin project, or if that was already done you can resolve the issues by using the options on vaadin project and choosing <em>Ivy &gt; Resolve</em></p>
+
+<p><img src="http://localhost:4000/assets/vaadin-error-4.png" alt="Ivy Resolve" title="Ivy Resolve" /></p>
+
+<p>Have fun with Vaadin!</p>
+:ET

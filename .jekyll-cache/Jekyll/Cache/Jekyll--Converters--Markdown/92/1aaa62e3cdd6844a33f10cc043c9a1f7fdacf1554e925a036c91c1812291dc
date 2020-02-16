@@ -1,0 +1,30 @@
+I"�<p>Today is a good day! I’m among the 7% that solved 50 Euler problems. Woohoo! Ok, ok! Enough bragging, so the problem 50 is called <a href="https://projecteuler.net/problem=50">consecutive prime sum</a> in which one must find the prime, below one-million, that can be written as the sum of the most consecutive primes.</p>
+
+<p>My first reaction was to compute the sum of all consecutive prime numbers until I got 1 million, then if that number was not a prime itself I would start removing the lowest primes and seeing if there’s space to add the next largest prime.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="n">limit</span> <span class="o">=</span> <span class="mi">1_000_000</span><span class="o">;</span>
+<span class="nc">ArrayList</span><span class="o">&lt;</span><span class="nc">Integer</span><span class="o">&gt;</span> <span class="n">primes</span> <span class="o">=</span> <span class="n">getPrimes</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">limit</span><span class="o">);</span>
+
+<span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+<span class="k">while</span> <span class="o">(</span><span class="n">sum</span> <span class="o">+</span> <span class="n">primes</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">)</span> <span class="o">&lt;</span> <span class="n">limit</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">sum</span> <span class="o">+=</span> <span class="n">primes</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
+    <span class="n">i</span><span class="o">++;</span>
+<span class="o">}</span>
+
+<span class="kt">int</span> <span class="n">start</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">end</span> <span class="o">=</span> <span class="n">i</span><span class="o">;</span>
+<span class="k">while</span> <span class="o">(!</span><span class="n">isPrime</span><span class="o">(</span><span class="n">sum</span><span class="o">))</span> <span class="o">{</span>
+    <span class="n">sum</span> <span class="o">-=</span> <span class="n">primes</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">start</span><span class="o">);</span>
+    <span class="k">while</span> <span class="o">(</span><span class="n">sum</span> <span class="o">+</span> <span class="n">primes</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">end</span><span class="o">)</span> <span class="o">&lt;</span> <span class="n">limit</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">sum</span> <span class="o">+=</span> <span class="n">primes</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">end</span><span class="o">);</span>
+        <span class="n">end</span><span class="o">++;</span>
+    <span class="o">}</span>
+    <span class="n">end</span> <span class="o">=</span> <span class="n">i</span><span class="o">;</span>
+    <span class="n">start</span><span class="o">++;</span>
+<span class="o">}</span>
+
+<span class="k">return</span> <span class="n">sum</span><span class="o">;</span></code></pre></figure>
+
+<p>The full solution can be found <a href="https://github.com/luisramalho/euler/blob/master/Problem050.java">here</a>.</p>
+:ET

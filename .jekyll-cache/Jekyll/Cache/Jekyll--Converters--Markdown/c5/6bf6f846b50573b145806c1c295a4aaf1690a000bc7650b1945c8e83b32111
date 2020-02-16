@@ -1,0 +1,20 @@
+I"+<p><a href="https://codility.com/demo/take-sample-test/max_profit">MaxProfit</a> is a problem where one must compute the maximum possible earnings given a log of stock prices. Note that before attempting this problem, you should read the material on <a href="https://codility.com/media/train/7-MaxSlice.pdf">maximum slice</a>.</p>
+
+<p>Our goal is to basically compute the maximum profit that ends in a given position. Thus, if we assume that the maximum profit that ends in a position <em>i</em> equals <em>maxProfit</em> then the maximum slice ending in position <em>i + 1</em> is going to be <em>max(0, maxProfit + (a<sub>i</sub> - a<sub>i - 1</sub>))</em>.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="n">maxProfit</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">maxSlice</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+
+<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">a</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+    <span class="n">maxProfit</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">maxProfit</span> <span class="o">+</span> <span class="o">(</span><span class="n">a</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">-</span> <span class="n">a</span><span class="o">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="o">]));</span>
+    <span class="n">maxSlice</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="n">maxSlice</span><span class="o">,</span> <span class="n">maxProfit</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="k">if</span> <span class="o">(</span><span class="n">maxSlice</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">maxSlice</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+<span class="o">}</span>
+
+<span class="k">return</span> <span class="n">maxSlice</span><span class="o">;</span></code></pre></figure>
+
+<p>The full solution can be found <a href="https://github.com/luisramalho/codility/blob/master/L07E1MaxProfit.java">here</a>.</p>
+:ET

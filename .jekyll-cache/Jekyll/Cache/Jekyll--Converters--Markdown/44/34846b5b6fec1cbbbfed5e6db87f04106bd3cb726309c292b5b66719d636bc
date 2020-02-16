@@ -1,0 +1,28 @@
+I"<p><a href="https://projecteuler.net/problem=55">Lychrel numbers</a> is a problem in which one must find how many Lychrel numbers are there below ten-thousand. You can read <a href="http://en.wikipedia.org/wiki/Lychrel_number">here</a> more about Lychrel numbers.</p>
+
+<p>It was clear since the beginning that we would be dealing with large numbers, so my approach was to use <a href="https://docs.oracle.com/javase/7/docs/api/java/math/BigInteger.html">BigIntegers</a>.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="n">lychrelNumbers</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+<span class="nc">BigInteger</span> <span class="n">temp</span><span class="o">;</span>
+<span class="nc">BigInteger</span> <span class="n">one</span> <span class="o">=</span> <span class="nc">BigInteger</span><span class="o">.</span><span class="na">ONE</span><span class="o">;</span>
+<span class="nc">BigInteger</span> <span class="n">b</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BigInteger</span><span class="o">(</span><span class="s">"10"</span><span class="o">);</span>
+<span class="nc">BigInteger</span> <span class="n">limit</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">BigInteger</span><span class="o">(</span><span class="s">"10000"</span><span class="o">);</span>
+<span class="k">for</span> <span class="o">(;</span> <span class="n">b</span><span class="o">.</span><span class="na">compareTo</span><span class="o">(</span><span class="n">limit</span><span class="o">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="o">;</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">one</span><span class="o">),</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="n">b</span><span class="o">;</span>
+    <span class="k">do</span> <span class="o">{</span>
+        <span class="n">temp</span> <span class="o">=</span> <span class="n">temp</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">reverse</span><span class="o">(</span><span class="n">temp</span><span class="o">));</span>
+        <span class="n">i</span><span class="o">++;</span>
+    <span class="o">}</span> <span class="k">while</span> <span class="o">(!</span><span class="n">isPalindrome</span><span class="o">(</span><span class="n">temp</span><span class="o">.</span><span class="na">toString</span><span class="o">())</span> <span class="o">&amp;&amp;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">50</span><span class="o">);</span>
+
+    <span class="c1">// Lychrel number</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">i</span> <span class="o">==</span> <span class="mi">50</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">lychrelNumbers</span><span class="o">++;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+<span class="k">return</span> <span class="n">lychrelNumbers</span><span class="o">;</span></code></pre></figure>
+
+<p>I started with 10 because 0 to 9 are palindromes. Inside the for loop we check if the addition of a number with it’s reverse is a palindrome for a maximum of 49 times. If not, then we got a Lychrel numbers.</p>
+
+<p>The full solution can be found <a href="https://github.com/luisramalho/euler/blob/master/Problem055.java">here</a>.</p>
+:ET

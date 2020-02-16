@@ -1,0 +1,19 @@
+I",<p>If you want to include an external php file on your vBulletin templates you’ll need more than just following this <a href="https://vbulletin.com/docs/html/templates_externalfiles">https://vbulletin.com/docs/html/templates_externalfiles</a></p>
+
+<p>Instead of just creating a plugin like:</p>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="nb">ob_start</span><span class="p">();</span>
+<span class="k">include</span><span class="p">(</span><span class="s1">'path/to/this/file/myfile.php'</span><span class="p">);</span>
+<span class="nv">$includedphp</span> <span class="o">=</span> <span class="nb">ob_get_contents</span><span class="p">();</span>
+<span class="nb">ob_end_clean</span><span class="p">();</span></code></pre></figure>
+
+<p>You  will need to add a last line, as following:</p>
+
+<figure class="highlight"><pre><code class="language-php" data-lang="php"><span class="nb">ob_start</span><span class="p">();</span>
+<span class="k">include</span><span class="p">(</span><span class="s1">'path/to/this/file/myfile.php'</span><span class="p">);</span>
+<span class="nv">$includedphp</span> <span class="o">=</span> <span class="nb">ob_get_contents</span><span class="p">();</span>
+<span class="nb">ob_end_clean</span><span class="p">();</span>
+<span class="nx">vB_Template</span><span class="o">::</span><span class="na">preRegister</span><span class="p">(</span><span class="s1">'TEMPLATE'</span><span class="p">,</span><span class="k">array</span><span class="p">(</span><span class="s1">'includedphp'</span> <span class="o">=&amp;</span><span class="nx">gt</span><span class="p">;</span> <span class="nv">$includedphp</span><span class="p">));</span></code></pre></figure>
+
+<p>You will have to change the “TEMPLATE” and “path/to/this/file/myfile.php” as fits your needs.</p>
+:ET

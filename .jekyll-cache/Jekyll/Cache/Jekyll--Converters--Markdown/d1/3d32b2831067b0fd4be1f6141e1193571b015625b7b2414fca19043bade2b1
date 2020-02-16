@@ -1,0 +1,20 @@
+I"¶	<p><a href="https://codility.com/demo/take-sample-test/count_factors">CountFactors</a> is a problem where one must compute the factors of a given number. Note that before attempting this problem, you should read the material on <a href="https://codility.com/media/train/8-PrimeNumbers.pdf">prime and composite numbers
+</a>.</p>
+
+<p>We incremente the count by two because based on one divisor, we can find the symmetric divisor. In other words, if <em>a</em> is a divisor of <em>n</em> then <em>n/a</em> is also one. The only case when that does not happen is when is if the number is in the form <em>k^2</em>, meaning that the symmetric divisor of <em>k</em> is also <em>k</em>.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+<span class="k">while</span> <span class="o">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="nc">Math</span><span class="o">.</span><span class="na">sqrt</span><span class="o">(</span><span class="n">n</span><span class="o">))</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">result</span> <span class="o">+=</span> <span class="mi">2</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="n">i</span><span class="o">++;</span>
+<span class="o">}</span>
+<span class="k">if</span> <span class="o">(</span><span class="nc">Math</span><span class="o">.</span><span class="na">pow</span><span class="o">(</span><span class="n">i</span><span class="o">,</span> <span class="mi">2</span><span class="o">)</span> <span class="o">==</span> <span class="n">n</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">result</span> <span class="o">+=</span> <span class="mi">1</span><span class="o">;</span>
+<span class="o">}</span>
+<span class="k">return</span> <span class="n">result</span><span class="o">;</span></code></pre></figure>
+
+<p>The full solution can be found <a href="https://github.com/luisramalho/codility/blob/master/L08E2CountFactors.java">here</a>.</p>
+:ET

@@ -1,0 +1,16 @@
+I"`<p>LeetCode’s <a href="https://oj.leetcode.com/problems/single-number/">Single Number</a> is a problem where an array of integers is given and every element appears twice except for one. The goal is to find that single one.</p>
+
+<p><a href="http://en.wikipedia.org/wiki/Exclusive_or">XOR</a> makes this exercise extremely straight forward. The reason being that when you XOR 3 elements, and two of them are repeated then you get the other element. Say <code class="highlighter-rouge">4 ^ 4 ^ 3</code> then you get <code class="highlighter-rouge">3</code>. Thus, the code below will give us the single element in the array that is not repeated.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Solution</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">singleNumber</span><span class="o">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">a</span><span class="o">)</span> <span class="o">{</span>
+        <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+        <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="na">length</span><span class="o">;</span>
+        <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+            <span class="n">x</span> <span class="o">^=</span> <span class="n">a</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="n">x</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+:ET

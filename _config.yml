@@ -1,14 +1,14 @@
 # Site wide configuration
 
-title:            Luís Ramalho
-locale:           pt_PT
-url:              https://luisramalho.com
+title: Luís Ramalho
+locale: pt_PT
+url: https://luisramalho.com
 page:
 
 # Jekyll configuration
 
-permalink:   /:title
-markdown:    kramdown
+permalink: /:title
+markdown: kramdown
 highlighter: rouge
 sass:
   sass_dir: _sass
@@ -23,12 +23,11 @@ kramdown:
   toc_levels: 1..6
   enable_coderay: false
 
-
 # Site owner
 owner:
   name: "Luís Ramalho"
   avatar: luisramalho.jpg
-  bio: "Product, Engineering, Business & Management"
+  bio: "Engineering, Product, Business & Management"
   email:
   disqus-shortname: luisramalho
   twitter: luisramalho
@@ -50,10 +49,32 @@ owner:
   foursquare: #username
   steam: #username
   dribbble: #username
-  youtube: DecentralizedProducts
+  youtube: #username
   soundcloud: #username
   weibo: #username
   flickr: #username
 
 include: [".htaccess"]
-exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
+exclude:
+  [
+    "lib",
+    "config.rb",
+    "Capfile",
+    "config",
+    "log",
+    "Rakefile",
+    "Rakefile.rb",
+    "tmp",
+    "less",
+    "*.sublime-project",
+    "*.sublime-workspace",
+    "test",
+    "spec",
+    "Gruntfile.js",
+    "package.json",
+    "node_modules",
+    "Gemfile",
+    "Gemfile.lock",
+    "LICENSE",
+    "README.md",
+  ]

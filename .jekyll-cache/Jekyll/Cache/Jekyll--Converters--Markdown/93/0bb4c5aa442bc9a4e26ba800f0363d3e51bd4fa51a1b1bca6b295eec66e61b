@@ -1,0 +1,25 @@
+I"T<p><a href="https://projecteuler.net/problem=56">Powerful digit sum</a> is a problem in which one must find the maximum digital sum considering natural numbers of the form, a^b, where a, b &lt; 100.</p>
+
+<p>Since we are dealing with big numbers, we should use <a href="https://docs.oracle.com/javase/7/docs/api/java/math/BigInteger.html">BigIntegers</a>. This library has the method <a href="https://docs.oracle.com/javase/7/docs/api/java/math/BigInteger.html#pow(int)">pow()</a> which makes our life easier when calculating powers of BigIntegers.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="n">max</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+<span class="nc">BigInteger</span> <span class="n">n</span><span class="o">;</span>
+<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="o">;</span> <span class="n">a</span><span class="o">++)</span> <span class="o">{</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">b</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="o">;</span> <span class="n">b</span><span class="o">++)</span> <span class="o">{</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="nc">BigInteger</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">a</span><span class="o">).</span><span class="na">pow</span><span class="o">(</span><span class="n">b</span><span class="o">);</span>
+        <span class="n">max</span> <span class="o">=</span> <span class="nc">Math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="n">digitalSum</span><span class="o">(</span><span class="n">n</span><span class="o">),</span> <span class="n">max</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+<span class="k">return</span> <span class="n">max</span><span class="o">;</span></code></pre></figure>
+
+<p>Then, it is just a matter of calculating the sum of all the digits in the BigInteger, and returning the maximum.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+<span class="nc">String</span> <span class="n">digits</span> <span class="o">=</span> <span class="n">n</span><span class="o">.</span><span class="na">toString</span><span class="o">();</span>
+<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">digits</span><span class="o">.</span><span class="na">length</span><span class="o">();</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+    <span class="n">sum</span> <span class="o">+=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="n">digits</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">i</span><span class="o">)</span> <span class="o">-</span> <span class="sc">'0'</span><span class="o">;</span>
+<span class="o">}</span>
+<span class="k">return</span> <span class="n">sum</span><span class="o">;</span></code></pre></figure>
+
+<p>The full solution can be found <a href="https://github.com/luisramalho/euler/blob/master/Problem056.java">here</a>.</p>
+:ET

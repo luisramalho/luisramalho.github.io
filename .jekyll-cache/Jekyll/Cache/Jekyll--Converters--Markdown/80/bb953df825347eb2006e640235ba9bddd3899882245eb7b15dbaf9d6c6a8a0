@@ -1,0 +1,11 @@
+I"«<p>PostgreSQL has case sensitivity and converts column names to lowercase when trying to do an Active Record Query. An error like the one below will occur:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">  PG::Error: ERROR:  column <span class="s2">"some_column"</span> does not exist
+LINE 1: SELECT <span class="s2">"some_table"</span>.<span class="k">*</span> FROM <span class="s2">"some_table"</span>  WHERE <span class="o">(</span>SOME_UPPERCASE_COLUMN <span class="o">=</span> <span class="s1">'some_value'</span><span class="o">)</span></code></pre></figure>
+
+<p>In order to solve this problem just escape quotes, likes this:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">  <span class="no">Class</span><span class="p">.</span><span class="nf">all</span><span class="p">(</span><span class="ss">conditions: </span><span class="p">[</span><span class="s2">"</span><span class="se">\"</span><span class="s2">SOME_UPPERCASE_COLUMN</span><span class="se">\"</span><span class="s2"> = ?"</span><span class="p">,</span> <span class="s1">'some_value'</span><span class="p">])</span></code></pre></figure>
+
+<p>Problem fixed!</p>
+:ET
